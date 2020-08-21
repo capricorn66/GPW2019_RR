@@ -1,0 +1,28 @@
+/* reboot
+*******************************************************************/
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  color: $body-color;
+  @include media-breakpoint-between(sm,md) {
+    padding-top: 65px;
+  }
+  @include media-breakpoint-up(lg) {
+    padding-top: 100px;
+  }
+}
+
+a {
+  color: $app-color-1;
+  &:focus,
+  &:hover {
+    color: darken($app-color-1, 10%)
+  }
+}
+
+hr {
+  border-top-color: $gray-200;
+}

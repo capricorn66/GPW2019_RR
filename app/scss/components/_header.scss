@@ -1,0 +1,106 @@
+/* header
+*******************************************************************/
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 101;
+    width: 100%;
+    background-color: $white;
+
+    @include media-breakpoint-down(xs) {
+        position: relative;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    body.sm & {
+        box-shadow: 0 0 10px 0 rgba($lightblack, .2);
+
+        .navbar {
+            .brand {
+                @include media-breakpoint-up(lg) {
+                    margin: 20px 40px 20px 0;
+                    img {
+                        width: 140px;
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar {
+
+        padding: 0;
+        font-size: 18px;
+
+        @include media-breakpoint-down(xs) {
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+
+        .brand {
+
+            @include transition(margin .25s ease);
+            img {
+                @include transition(width .25s ease);
+            }
+
+            @include media-breakpoint-only(xs) {
+                margin: 15px 0 20px;
+                img {
+                    width: 120px;
+                }
+            }
+
+            @include media-breakpoint-between(sm,md) {
+                margin: 15px 40px 15px 0;
+                img {
+                    width: 120px;
+                }
+            }
+
+            @include media-breakpoint-up(lg) {
+                margin: 25px 40px 25px 0;
+                img {
+                    width: 170px;
+                }
+            }
+
+            &:focus,
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        .nav-tools {
+            list-style: none;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-bottom: 0;
+            padding: 0;
+            @include media-breakpoint-only(xs) {
+                padding-bottom: 15px;
+            }
+            .nav-link {
+                padding: 0 10px;
+                line-height: 1;
+                &.nav-link-lang {
+                    background-color: $app-color-1;
+                    border-radius: 10px;
+                    color: $white;
+                    font-size: 16px;
+                    padding: 3px 10px;
+                }
+            }
+
+            i {
+                font-size: 26px;
+            }
+        }
+    }
+}

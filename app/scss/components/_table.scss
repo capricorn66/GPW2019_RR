@@ -1,0 +1,449 @@
+/* table
+*******************************************************************/
+
+.table {
+  .table-responsive & {
+    margin-bottom: 30px;
+  }
+
+  caption {
+    font-size: 14px;
+  }
+
+  .custom-checkbox {
+    .custom-control-input ~ .custom-control-label::before,
+    .custom-control-input:checked ~ .custom-control-label::before {
+      border-color: $app-color-1;
+    }
+    .custom-control-input ~ .custom-control-label::before {
+      background-color: $white;
+    }
+    .custom-control-input:checked ~ .custom-control-label::before {
+      background-color: $app-color-1;
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+
+    &.clm-1-bg-red,
+    &.clm-2-bg-red,
+    &.clm-3-bg-red,
+    &.clm-4-bg-red,
+    &.clm-5-bg-red,
+    &.clm-6-bg-red,
+    &.clm-7-bg-red,
+    &.clm-8-bg-red,
+    &.clm-9-bg-red,
+    &:not(.table-hoverless) {
+      tr {
+        &:not(.collapse-row):hover {
+          td {
+            background: $app-color-2 !important;
+            color: $white;
+            a {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media all and (-ms-high-contrast:none) {
+    &.clm-1-bg-red,
+    &.clm-2-bg-red,
+    &.clm-3-bg-red,
+    &.clm-4-bg-red,
+    &.clm-5-bg-red,
+    &.clm-6-bg-red,
+    &.clm-7-bg-red,
+    &.clm-8-bg-red,
+    &.clm-9-bg-red,
+    &:not(.table-hoverless) {
+      tr {
+        &:not(.collapse-row):hover {
+          td {
+            background: $app-color-2 !important;
+            color: $white;
+
+            a {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  width: 100%;
+  margin-bottom: 30px;
+  tr {
+    &:nth-child(odd) td {
+      background-color: $gray-100;
+      .darkTheme & {
+        background-color: $gray-800;
+        color: $white;
+      }
+    }
+    &:nth-child(even) td {
+      background-color: $white;
+      .darkTheme & {
+        background-color: $gray-900;
+        color: $white;
+      }
+    }
+    &.collapse-row {
+      display: none;
+      &.collapse-row-show {
+        display: table-row;
+      }
+      td {
+        padding: 0;
+        .collapse-row-body {
+          background-color: $gray-100;
+          .darkTheme & {
+            background-color: $gray-900;
+          }
+          ol {
+            margin-bottom: 0;
+          }
+          padding: 20px;
+          @media (max-width: 767px) {
+            padding: 10px 15px;
+          }
+          @media (max-width: 991px) {
+            padding: 15px 10px;
+          }
+        }
+      }
+    }
+
+    &.bg-color {
+      th, td {
+        background: $app-color-1 !important;
+        color: $white;
+        .darkTheme & {
+          background: $dark-color-1 !important;
+          color: $black;
+        }
+      }
+    }
+
+    &.bg-white {
+      th, td {
+        background: $white !important;
+        .darkTheme & {
+          background: $black !important;
+        }
+      }
+    }
+
+    &.bg-lightgray {
+      th, td {
+        background: $gray-200 !important;
+        .darkTheme & {
+          background: $gray-800 !important;
+        }
+      }
+    }
+
+    &.bg-gray {
+      th, td {
+        background: $gray-400 !important;
+        color: $white;
+        .darkTheme & {
+          background: $gray-600 !important;
+          color: $black;
+        }
+      }
+    }
+
+    &.sub td:first-child {
+      padding-left: 50px;
+      @media (max-width: 767px) {
+        padding-left: 30px;
+      }
+
+      @media (max-width: 991px) {
+        padding-left: 40px;
+      }
+    }
+
+  }
+
+  th, td {
+    padding: 20px 10px;
+    vertical-align: top;
+    border: 0 !important;
+    font-weight: 300;
+    &.v-mid {
+      vertical-align: middle;
+    }
+    &:first-child {
+      padding-left: 20px;
+      text-align: left;
+    }
+    &:last-child {
+      padding-right: 20px;
+    }
+    &.bg-color {
+      background: $app-color-1 !important;
+      color: $white;
+      .darkTheme & {
+        background: $dark-color-1 !important;
+        color: $black;
+      }
+    }
+    &.bg-white {
+      background: $white;
+      .darkTheme & {
+        background: $black;
+      }
+    }
+    &.bg-lightgray {
+      background: $gray-200;
+      .darkTheme & {
+        background: $gray-800;
+      }
+    }
+    &.bg-gray {
+      background: $gray-400 !important;
+      color: $white;
+      .darkTheme & {
+        background: $gray-600 !important;
+        color: $black;
+      }
+    }
+    @media (max-width: 767px) {
+      padding: 10px 5px;
+      &:first-child {
+        padding-left: 15px;
+      }
+      &:last-child {
+        padding-right: 15px;
+      }
+    }
+    @media (max-width: 991px) {
+      padding: 15px 10px;
+    }
+  }
+
+  th {
+    text-align: center;
+    background-color: $app-color-1;
+    color: $white;
+    .darkTheme & {
+      background: $gray-200;
+      color: $black;
+    }
+    font-weight: 300;
+  }
+  td {
+    text-align: right;
+    -webkit-transition: background-color 0.1s ease-out;
+    transition: background-color 0.1s ease-out;
+    p {
+      margin: 0;
+      font-size: 15px;
+    }
+  }
+}
+
+P + .table-responsive {
+
+}
+
+.clm-2 th { width: 40% !important;}
+.clm-2 th:nth-child(1) { width: 60% !important;}
+
+.clm-3 th { width: 20% !important;}
+.clm-3 th:nth-child(1) { width: 60% !important;}
+
+.clm-4 th { width: 15% !important;}
+.clm-4 th:nth-child(1) { width: 55% !important;}
+
+.clm-5 th { width: 17.5% !important;}
+.clm-5 th:nth-child(1) { width: 30% !important;}
+
+.clm-6 th { width: 15% !important;}
+.clm-6 th:nth-child(1) { width: 25% !important;}
+
+.clm-7 th { width: 13% !important;}
+.clm-7 th:nth-child(1) { width: 22% !important;}
+
+.clm-8 th { width: 11% !important; }
+.clm-8 th:nth-child(1) { width: 23% !important;}
+
+.clm-9 th { width: 10% !important;}
+.clm-9 th:nth-child(1) { width: 20% !important;}
+
+.clm-10 th { width: 10% !important;}
+.clm-10 th:nth-child(1) { width: 10% !important;}
+
+.clm-11 th { width: 9% !important;}
+.clm-11 th:nth-child(1) { width: 10% !important;}
+
+.clm-12 th { width: 8% !important;}
+.clm-12 th:nth-child(1) { width: 12% !important;}
+
+.clm-13 th { width: 7% !important;}
+.clm-13 th:nth-child(1) { width: 16% !important;}
+
+.clm-6 .clm-5-colspan-2 th { width: 15% !important;}
+
+
+.clm-1-bg-color th:nth-child(1):not([colspan]),
+.clm-1-bg-color td:nth-child(1):not([colspan]) {
+  background: $app-color-1 !important;
+  color: #FFF;
+  .darkTheme & {
+    background: $dark-color-1 !important;
+    color: $black;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .clm-1-bg-color tr:not(.collapse-row):hover td:nth-child(1):not([colspan]),
+  .clm-1-bg-color tr:not(.collapse-row):hover th:nth-child(1):not([colspan]) {
+    background: $dark-color-2 !important;
+  }
+}
+
+.clm-2-bg-color th:not([colspan]) + th:nth-child(2):not([colspan]),
+.clm-2-bg-color td:not([colspan]) + td:nth-child(2):not([colspan]) {
+  background: $app-color-1 !important;
+  color: #FFF;
+  .darkTheme & {
+    background: $dark-color-1 !important;
+    color: $black;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .clm-2-bg-color tr:not(.collapse-row):hover td:not([colspan]) + td:nth-child(2):not([colspan]),
+  .clm-2-bg-color tr:not(.collapse-row):hover th:not([colspan]) + td:nth-child(2):not([colspan]),
+  .clm-2-bg-color tr:not(.collapse-row):hover th:not([colspan]) + th:nth-child(2):not([colspan]) {
+    background: $dark-color-2 !important;
+  }
+}
+
+.clm-3-bg-color th:not([colspan]) + th:not([colspan]) + th:nth-child(3):not([colspan]),
+.clm-3-bg-color td:not([colspan]) + td:not([colspan]) + td:nth-child(3):not([colspan]) {
+  background: $app-color-1 !important;
+  color: #FFF;
+  .darkTheme & {
+    background: $dark-color-1 !important;
+    color: $black;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .clm-3-bg-color tr:not(.collapse-row):hover td:not([colspan]) + td:not([colspan]) + td:nth-child(3):not([colspan]),
+  .clm-3-bg-color tr:not(.collapse-row):hover th:not([colspan]) + td:not([colspan]) + td:nth-child(3):not([colspan]),
+  .clm-3-bg-color tr:not(.collapse-row):hover th:not([colspan]) + th:not([colspan]) + th:nth-child(3):not([colspan]) {
+    background: $app-color-2 !important;
+  }
+}
+
+.clm-4-bg-color th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:nth-child(4):not([colspan]),
+.clm-4-bg-color th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:nth-child(4):not([colspan]),
+.clm-4-bg-color td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:nth-child(4):not([colspan]) {
+  background: $app-color-1 !important;
+  color: #FFF;
+  .darkTheme & {
+    background: $dark-color-1 !important;
+    color: $black;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .clm-4-bg-color tr:not(.collapse-row):hover td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:nth-child(4):not([colspan]),
+  .clm-4-bg-color tr:not(.collapse-row):hover th:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:nth-child(4):not([colspan]),
+  .clm-4-bg-color tr:not(.collapse-row):hover th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:nth-child(4):not([colspan]) {
+    background: $app-color-2 !important;
+  }
+}
+
+.clm-5-bg-color th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:nth-child(5):not([colspan]),
+.clm-5-bg-color td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:nth-child(5):not([colspan]) {
+  background: $app-color-1 !important;
+  color: #FFF;
+  .darkTheme & {
+    background: $dark-color-1 !important;
+    color: $black;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .clm-5-bg-color tr:not(.collapse-row):hover td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:nth-child(5):not([colspan]),
+  .clm-5-bg-color tr:not(.collapse-row):hover th:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:nth-child(5):not([colspan]),
+  .clm-5-bg-color tr:not(.collapse-row):hover th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:nth-child(5):not([colspan]) {
+    background: $app-color-2 !important;
+  }
+}
+
+.clm-6-bg-color th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:nth-child(6):not([colspan]),
+.clm-6-bg-color td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:nth-child(6):not([colspan]) {
+  background: $app-color-1 !important;
+  color: #FFF;
+  .darkTheme & {
+    background: $dark-color-1 !important;
+    color: $black;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .clm-6-bg-color tr:not(.collapse-row):hover td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:nth-child(6):not([colspan]),
+  .clm-6-bg-color tr:not(.collapse-row):hover th:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:nth-child(6):not([colspan]),
+  .clm-6-bg-color tr:not(.collapse-row):hover th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:nth-child(6):not([colspan]) {
+    background: $app-color-2 !important;
+  }
+}
+
+.clm-7-bg-color th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:nth-child(7):not([colspan]),
+.clm-7-bg-color td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:nth-child(7):not([colspan]) {
+  background: $app-color-1 !important;
+  color: #FFF;
+  .darkTheme & {
+    background: $dark-color-1 !important;
+    color: $black;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .clm-7-bg-color tr:not(.collapse-row):hover td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:nth-child(7):not([colspan]),
+  .clm-7-bg-color tr:not(.collapse-row):hover th:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:nth-child(7):not([colspan]),
+  .clm-7-bg-color tr:not(.collapse-row):hover th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:nth-child(7):not([colspan]) {
+    background: $app-color-2 !important;
+  }
+}
+
+.clm-8-bg-color th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:nth-child(8):not([colspan]),
+.clm-8-bg-color td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:nth-child(8):not([colspan]) {
+  background: $app-color-1 !important;
+  color: #FFF;
+  .darkTheme & {
+    background: $dark-color-1 !important;
+    color: $black;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .clm-8-bg-color tr:not(.collapse-row):hover td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:nth-child(8):not([colspan]),
+  .clm-8-bg-color tr:not(.collapse-row):hover th:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:nth-child(8):not([colspan]),
+  .clm-8-bg-color tr:not(.collapse-row):hover th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:nth-child(8):not([colspan]) {
+    background: $app-color-2 !important;
+  }
+}
+
+.clm-9-bg-color th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:nth-child(9):not([colspan]),
+.clm-9-bg-color td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:nth-child(9):not([colspan]) {
+  background: $app-color-1 !important;
+  color: #FFF;
+  .darkTheme & {
+    background: $dark-color-1 !important;
+    color: $black;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .clm-9-bg-color tr:not(.collapse-row):hover td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:nth-child(9):not([colspan]),
+  .clm-9-bg-color tr:not(.collapse-row):hover th:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:nth-child(9):not([colspan]),
+  .clm-9-bg-color tr:not(.collapse-row):hover th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:not([colspan]) + th:nth-child(9):not([colspan]) {
+    background: $app-color-2 !important;
+  }
+}
+
+
+

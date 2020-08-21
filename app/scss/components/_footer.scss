@@ -1,0 +1,42 @@
+/* footer
+*******************************************************************/
+
+footer {
+  position: relative;
+  padding: 50px 0 0;
+  font-size: 14px;
+  background-color: $app-color-1;
+  color: $white;
+  .nav-link {
+    color: $white;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.3em;
+    transition: opacity ease-out .3s;
+    &:focus,
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  .footer-bottom {
+    margin-top: 50px;
+    padding: 20px 0;
+    background-color: $white;
+    font-size: 14px;
+    color: $black;
+    .footer-bottom-nav {
+      .footer-bottom-link {
+        i {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}

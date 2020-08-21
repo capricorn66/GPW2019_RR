@@ -1,0 +1,85 @@
+/* accordion
+*******************************************************************/
+
+.accordion {
+  border-bottom: 1px solid $gray-200;
+  margin-bottom: 30px;
+  .btn-accordion {
+    span {
+      &:first-child {
+        display: none;
+      }
+      &:last-child {
+        display: inline;
+      }
+    }
+    &.collapsed {
+      span {
+        &:first-child {
+          display: inline;
+        }
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .btn-accordion {
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    padding: 10px 0 10px 44px;
+    text-align: left;
+    position: relative;
+    font-size: 16px;
+    &::after {
+      /* use !important to prevent issues with browser extensions that change fonts */
+      content: "\e900";
+      font-family: 'icomoon' !important;
+      speak: never;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 24px;
+
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      position: absolute;
+      left: 0;
+      top: 11px;
+      color: $app-color-1;
+    }
+    &.collapsed::after  {
+      content: "\e902";
+    }
+    &:focus,
+    &:hover {
+      color: $app-color-1;
+    }
+  }
+  .accordion-item {
+
+    &::after {
+      content: "";
+      height: 1px;
+      background: $app-color-1;
+      display: block;
+      margin: 10px 0;
+      width: 230px;
+    }
+    .collapsing,
+    .collapse {
+      padding: 0 0 0 30px;
+      .accordion-body {
+        padding: 15px 0;
+      }
+    }
+  }
+
+}

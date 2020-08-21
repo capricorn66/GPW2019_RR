@@ -1,0 +1,269 @@
+/* aside
+*******************************************************************/
+
+.aside-tools {
+  top: 100px;
+  position: sticky;
+  z-index: 2;
+  float: right;
+  @include media-breakpoint-down(md) {
+    float: none;
+    margin-bottom: 40px;
+    position: static;
+  }
+  @include media-breakpoint-up(lg) {
+    + main {
+      margin-right: 120px;
+    }
+  }
+
+  .tools-nav {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    @include media-breakpoint-down(md) {
+      background: $app-color-1;
+    }
+    .tools-item {
+      text-align: center;
+      position: relative;
+      width: 100%;
+      margin: 0;
+      @include media-breakpoint-down(md) {
+        width: auto;
+        display: inline-block;
+      }
+
+      .tip {
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        font-size: 14px;
+        padding: 5px 22px 6px;
+        display: block;
+        right: 100%;
+        transform: translate(0, 0);
+        top: 50%;
+        margin: -15px 0 0;
+        border-radius: 4px;
+        background: $app-color-2;
+        color: $white;
+        -webkit-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+        &:before {
+          content: attr(data-title);
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 100%;
+          left: 100%;
+          margin-top: -1px;
+          top: 50%;
+          transform: translate(0, 0);
+          width: 10px;
+          height: 2px;
+          background: $app-color-2;
+        }
+      }
+
+      &:hover .tip {
+        opacity: 1;
+        margin-right: 10px;
+        visibility: visible;
+      }
+
+      .dropdown-menu {
+        background: $app-color-2;
+        padding: 0;
+        border: 0;
+        min-width: 100%;
+        @include media-breakpoint-up(lg) {
+          right: 100%;
+          left: auto !important;
+          transform:translate3d(0, 0, 0) !important;
+          white-space: nowrap;
+          margin: 13px -10px 0 0;
+          border-radius: 8px !important;
+          padding: 0 30px 0 20px;
+          &::before {
+            content: "";
+            position: absolute;
+            left: 100%;
+            top: 50%;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 12px 0 12px 8px;
+            border-color: transparent transparent transparent $app-color-2;
+            transform: translateY(-50%);
+          }
+        }
+        @include media-breakpoint-down(md) {
+          margin-top: 0;
+          padding: 5px 0 10px;
+          transform: translateX(-50%) !important;
+          left: 50% !important;
+          top: 100% !important;
+          &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 100%;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 12px 8px 12px;
+            border-color: transparent transparent $app-color-2 transparent;
+            transform: translateX(-50%);
+          }
+        }
+        button,
+        a {
+          background: $app-color-2;
+          cursor: pointer;
+          border: 0;
+          color: #FFF;
+          -webkit-transition: all 0.2s ease-out;
+          transition: all 0.2s ease-out;
+          @include media-breakpoint-up(lg) {
+            display: inline-block;
+            min-height: 64px;
+            line-height: 48px;
+            text-align: left;
+            padding: 5px 15px;
+          }
+          @include media-breakpoint-down(md) {
+            display: block;
+            text-align: center;
+            padding: 10px 12px;
+          }
+          .link-name {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 14px;
+            line-height: 1.3em;
+            font-weight: 400;
+            i {
+              font-size: 32px;
+            }
+          }
+        }
+      }
+
+      &:last-child .tools-link::after {
+        display: none;
+      }
+
+      .tools-link {
+        background: $app-color-1;
+        color: $white;
+        font-size: 40px;
+        line-height: 34px;
+        border: 0;
+        @include media-breakpoint-up(lg) {
+          padding: 15px;
+          width: 90px;
+          height: 90px;
+        }
+        @include media-breakpoint-down(md) {
+          padding: 5px;
+          width: 60px;
+          height: 60px;
+        }
+        position: relative;
+        outline: 0;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 1px;
+          bottom: 0;
+          left: 0;
+          background: $app-color-2;
+          @include media-breakpoint-down(md) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.aside-navbar {
+  float: left;
+  width: 220px;
+  top: 100px;
+  position: sticky;
+  @media all and (-ms-high-contrast:none)
+  {
+    position: relative;
+    top: 0;
+  }
+  @include media-breakpoint-down(md) {
+    float: none;
+    width: auto;
+    margin-bottom: 60px;
+    position: static;
+  }
+
+  .aside-nav {
+    background: $app-color-3;
+    padding: 30px 20px;
+    + .aside-extras {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 1px;
+        background-color: $app-color-1;
+      }
+    }
+  }
+
+  .aside-extras {
+    background: $white;
+    padding: 30px 20px;
+    h4 {
+      font-style: italic;
+      font-size: 22px;
+      font-weight: 300;
+      color: $gray-500;
+      margin-bottom: 20px;
+    }
+  }
+
+  .aside-link {
+    color: $black;
+    font-weight: 300;
+    .darkTheme & {
+      background: $gray-700;
+      color: $white;
+      border: 3px solid $gray-700;
+    }
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    &:hover,
+    &.active {
+      color: $app-color-1;
+      font-weight: 500;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    + .aside-tools + main {
+      margin-left: 260px;
+      margin-right: 120px;
+    }
+  }
+
+}

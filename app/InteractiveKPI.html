@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <title>GPW - RAPORT ROCZNY 2019</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav class="navbar align-items-center">
+
+                <a class="brand" href="#">
+                    <img src="./images/GPW.svg" alt="GPW">
+                </a>
+
+                <ul class="nav-tools">
+                    <li class="nav-item active">
+                        <a class="nav-link nav-link-lang mr-20" href="#">EN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" role="button" href="#">
+                            <i class="icon-text-size"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" role="button" href="#">
+                            <i class="icon-contrast"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" role="button" class="nav-link" data-toggle="modal" data-target="#searchModal">
+                            <i class="icon-search"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ml-10 ml-sm-30" role="button" href="#" data-toggle="modal" data-target="#menuModal">
+                            <i class="icon-menu"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
+    <div class="jumbotron" style="background-image: url('images/jumbotron-background-5.jpg')">
+        <div class="jumbotron-foreground" style="background-image: url('images/jumbotron-foreground-1.png')">
+            <div class="container">
+                <h1><strong>2019</strong>Raport Zintegrowany GPW</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Strona główna</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Interaktywne KPI</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <main>
+
+            <h1>Interaktywne KPI</h1>
+
+            <div class="page-section" style="background-image: url('images/letter-lead-bg.jpg');">
+                <div class="py-70">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" style="" class="nav-link active" onclick="headerMenu(this)" id="interactive-menu-0">Dane roczne</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" style="" class="nav-link" onclick="headerMenu(this)" id="interactive-menu-1">Dane kwartalne</a>
+                        </li>
+                    </ul>
+                    <div class="page-section-body">
+
+                        <div class="borderedContainer menu tab-content tab-content-kpi">
+                            <ul class="nav nav-tabs nav-borderedContainer headerMenuHidden">
+                                <li class="nav-item main-nav-item-2 active">
+                                    <a href="javascript:void(0)" style="display: none;" class="nav-link" id="interactive-menu-0-hidden">Dane roczne</a>
+                                    <ul class="subTabMenu nav nav-tabs nav-tabs-capital" style="">
+                                        <li class="nav-item active"><a href="javascript:void(0)" class="nav-link active" role="tab">Bilans</a></li>
+                                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link" role="tab">Rachunek wyników</a></li>
+                                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link" role="tab">Podstawowe wskaźniki finansowe</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item main-nav-item-2">
+                                    <a href="javascript:void(0)" style="display: none;" class="nav-link" id="interactive-menu-1-hidden">Dane kwartalne</a>
+                                    <ul class="subTabMenu nav nav-tabs nav-tabs-capital" style="display:none;">
+                                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link" role="tab">Bilans</a></li>
+                                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link" role="tab">Rachunek wyników</a></li>
+                                        <li class="nav-item"><a href="javascript:void(0)" class="nav-link" role="tab">Podstawowe wskaźniki finansowe</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="kpi-dates d-flex">
+                                <span class="mr-30 no-wrap">Dane z lat:</span>
+                                <div class="checkbox-list">
+                                    <div class="custom-control-inline custom-checkbox custom-checkbox-lg mb-10">
+                                        <input type="checkbox" class="custom-control-input" id="defaultCheck0" onclick="iDChangeYear([0])" checked="">
+                                        <label class="custom-control-label" for="defaultCheck0">2013</label>
+                                    </div>
+                                    <div class="custom-control-inline custom-checkbox custom-checkbox-lg mb-10">
+                                        <input type="checkbox" class="custom-control-input" id="defaultCheck1" onclick="iDChangeYear([1])" checked="">
+                                        <label class="custom-control-label" for="defaultCheck1">2014</label>
+                                    </div>
+                                    <div class="custom-control-inline custom-checkbox custom-checkbox-lg mb-10">
+                                        <input type="checkbox" class="custom-control-input" id="defaultCheck2" onclick="iDChangeYear([2])" checked="">
+                                        <label class="custom-control-label" for="defaultCheck2">2015</label>
+                                    </div>
+                                    <div class="custom-control-inline custom-checkbox custom-checkbox-lg mb-10">
+                                        <input type="checkbox" class="custom-control-input" id="defaultCheck3" onclick="iDChangeYear([3])" checked="">
+                                        <label class="custom-control-label" for="defaultCheck3">2016</label>
+                                    </div>
+                                    <div class="custom-control-inline custom-checkbox custom-checkbox-lg mb-10">
+                                        <input type="checkbox" class="custom-control-input" id="defaultCheck4" onclick="iDChangeYear([4])" checked="">
+                                        <label class="custom-control-label" for="defaultCheck4">2017</label>
+                                    </div>
+                                    <div class="custom-control-inline custom-checkbox custom-checkbox-lg mb-10">
+                                        <input type="checkbox" class="custom-control-input" id="defaultCheck5" onclick="iDChangeYear([5])" checked="">
+                                        <label class="custom-control-label" for="defaultCheck5">2018</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex flex-wrap">
+                <ul class="nav nav-tabs nav-tabs-charts my-20" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#chart-bars" role="tab" onclick="clickChart(this)" aria-selected="true">
+                            <i class="icon-chart-bars"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#chart-lines" role="tab" onclick="clickChart(this)" aria-selected="false">
+                            <i class="icon-chart-lines"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="table-search ml-auto my-20">
+                    <form class="form-group row">
+                        <label class="col-form-label col-auto gray-500">Szukaj</label>
+                        <div class="search-group input-group col">
+                            <input type="text" class="form-control table-search__input" onkeyup="tableSearchAction(this)" id="search-table-1598008787388-38322907369689574-7684098536923781">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2"><i class="icon-search"></i></span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="box-hr">
+                <div class="tab-content">
+                    <div id="chart-bars" class="chartView chartView-column tab-pane fade show active" role="tabpanel" aria-labelledby="chart-bars-tab"></div>
+                    <div id="chart-lines" class="chartView chartView-line tab-pane fade" role="tabpanel" aria-labelledby="chart-lines-tab"></div>
+                </div>
+            </div>
+
+            <div class="box-hr">
+                <div class="table-responsive mb-30">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Oznacz i pokaż na wykresie</th>
+                                <th>Jednostka</th>
+                                <th class="text-right">2017</th>
+                                <th class="text-right">2018</th>
+                                <th class="text-right">2019</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox custom-checkbox-lg">
+                                        <input type="checkbox" class="custom-control-input" id="check_1">
+                                        <label class="custom-control-label" for="check_1">Aktywa trwałe</label>
+                                    </div>
+                                </td>
+                                <td class="text-center no-wrap">tys. PLN</td>
+                                <td class="text-right no-wrap">597 287</td>
+                                <td class="text-right no-wrap">596 354</td>
+                                <td class="text-right no-wrap">580 375</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox custom-checkbox-lg">
+                                        <input type="checkbox" class="custom-control-input" id="check_2">
+                                        <label class="custom-control-label" for="check_2">Aktywa obrotowe</label>
+                                    </div>
+                                </td>
+                                <td class="text-center no-wrap">tys. PLN</td>
+                                <td class="text-right no-wrap">560 561</td>
+                                <td class="text-right no-wrap">550 699</td>
+                                <td class="text-right no-wrap">636 942</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox custom-checkbox-lg">
+                                        <input type="checkbox" class="custom-control-input" id="check_3">
+                                        <label class="custom-control-label" for="check_3">Aktywa razem</label>
+                                    </div>
+                                </td>
+                                <td class="text-center no-wrap">tys. PLN</td>
+                                <td class="text-right no-wrap">1 157 848</td>
+                                <td class="text-right no-wrap">1 147 053</td>
+                                <td class="text-right no-wrap">1 217 317</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox custom-checkbox-lg">
+                                        <input type="checkbox" class="custom-control-input" id="check_4">
+                                        <label class="custom-control-label" for="check_4">Kapitał własny</label>
+                                    </div>
+                                </td>
+                                <td class="text-center no-wrap">tys. PLN</td>
+                                <td class="text-right no-wrap">730 592</td>
+                                <td class="text-right no-wrap">799 467</td>
+                                <td class="text-right no-wrap">890 538</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox custom-checkbox-lg">
+                                        <input type="checkbox" class="custom-control-input" id="check_5">
+                                        <label class="custom-control-label" for="check_5">Zobowiązania długoterminowe</label>
+                                    </div>
+                                </td>
+                                <td class="text-center no-wrap">tys. PLN</td>
+                                <td class="text-right no-wrap">155 436</td>
+                                <td class="text-right no-wrap">270 781</td>
+                                <td class="text-right no-wrap">269 333</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox custom-checkbox-lg">
+                                        <input type="checkbox" class="custom-control-input" id="check_6">
+                                        <label class="custom-control-label" for="check_6">Zobowiązania krótkoterminowe</label>
+                                    </div>
+                                </td>
+                                <td class="text-center no-wrap">tys. PLN</td>
+                                <td class="text-right no-wrap">271 820</td>
+                                <td class="text-right no-wrap">76 805</td>
+                                <td class="text-right no-wrap">57 446</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox custom-checkbox-lg">
+                                        <input type="checkbox" class="custom-control-input" id="check_7">
+                                        <label class="custom-control-label" for="check_7">Pasywa razem</label>
+                                    </div>
+                                </td>
+                                <td class="text-center no-wrap">tys. PLN</td>
+                                <td class="text-right no-wrap">1 157 848</td>
+                                <td class="text-right no-wrap">1 147 053</td>
+                                <td class="text-right no-wrap">1 217 317</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="ml-sm-20 ml-md-60 ml-xl-100 pl-xl-20 py-40 mb-100">
+                <p>Dane przygotowane na podstawie Skonsolidowanych Sprawozdań Finansowych Grupy Kapitałowej Giełdy Papierów Wartościowych w Warszawie S.A. zawartych w Prospekcie Emisyjnym i raportach okresowych Grupy GPW. Jedynie dane za pełne lata obrotowe są audytowane.</p>
+            </div>
+
+            <hr class="my-50">
+
+            <div class="d-flex justify-content-between mb-30">
+                <a href="" class="link font-18 pr-10">Poprzednia strona</a>
+                <a href="" class="link font-18 pl-10 text-right">Następna strona</a>
+            </div>
+
+            <hr class="my-50 d-xxl-none">
+
+            <div class="d-flex justify-content-between flex-column flex-xl-row justify-content-between">
+                <a href="" class="d-flex align-items-center link font-22 mb-30">
+                    <i class="icon-arrow-left font-60 mr-20 app-color-1"></i>
+                    <span>Kluczowe wyniki finansowe i niefinansowe</span>
+                </a>
+                <a href="" class="d-flex align-items-center link font-22 mb-30 text-right ml-auto">
+                    <span>Otoczenie zewnętrzne</span>
+                    <i class="icon-arrow-right font-60 ml-20 app-color-1"></i>
+                </a>
+            </div>
+
+        </main>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 text-center">
+                    <a href="" class="nav-link">
+                        <i class="icon-financial-statements font-80"></i>
+                        Skonsolidowane sprawozdanie finansowe GK GPW 2019
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 text-center">
+                    <a href="" class="nav-link">
+                        <i class="icon-documents font-80"></i>
+                        Centrum dokumentów
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 text-center">
+                    <a href="" class="nav-link">
+                        <i class="icon-tables-and-charts font-80"></i>
+                        Centrum tabel i wykresów
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 text-center">
+                    <a href="" class="nav-link">
+                        <i class="icon-media font-80"></i>
+                        Centrum multimediów
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 text-center">
+                    <a href="" class="nav-link">
+                        <i class="icon-questionnaire font-80"></i>
+                        Ankieta
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 text-center">
+                    <a href="" class="nav-link">
+                        <i class="icon-KPI font-80"></i>
+                        Interaktywne KPI
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container d-flex flex-column flex-sm-row align-items-sm-center">
+                <p class="mb-20 mb-sm-0">Raport Roczny GPW został przygotowany zgodnie z wytycznymi International Integrated Reporting
+                    Council.</p>
+                <div class="footer-bottom-nav ml-sm-auto no-wrap pl-sm-40">
+                    <a href="" class="footer-bottom-link">
+                        <i class="icon-social-twitter"></i>
+                    </a>
+                    <a href="" class="footer-bottom-link">
+                        <i class="icon-social-facebook"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cookies">
+        <div class="container d-flex flex-column flex-sm-row">
+            <i class="icon-cookie mr-30"></i>
+            <div class="mr-20">
+                <strong class="h4">Ważne: Strona wykorzystuje pliki cookies.</strong>
+                <p class="mb-20 mb-md-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vulputate blandit nunc nec bibendum. Aenean rutrum dui est, eu luctus arcu condimentum vel. Nam in ornare urna, sagittis finibus nisl. Nulla facilisi. In pulvinar egestas purus id sodales. Vivamus a velit et lorem luctus maximus. Fusce dictum sapien sed ipsum euismod ultrices. Sed diam odio, bibendum vitae elit eu, suscipit ultricies nisl. Nullam malesuada neque eu risus efficitur aliquet.   <a href="">Polityce Cookies</a>".</p>
+            </div>
+            <div class="ml-sm-auto align-self-sm-end">
+                <a class="btn btn-primary">Zamknij</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Search -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content modal-search">
+
+                <div class="input-group input-group-lg">
+                    <input type="text" class="form-control border-0" placeholder="Szukaj" aria-label="Wyszukaj w serwisie">
+                    <div class="input-group-append">
+                        <button class="btn" type="button" id="button-addon2">
+                            <i class="icon-search app-color-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="icon-close white"></span>
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Menu -->
+    <div class="modal fade" id="menuModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-menu">
+            <div class="modal-content">
+                <div class="modal-header no-gutters flex-wrap">
+                    <div class="col-6 col-lg-3">
+                        <span class="brand">
+                            <img src="./images/GPW-white.svg" alt="GPW">
+                        </span>
+                    </div>
+                    <div class="col-lg-6 order-last order-lg-0">
+                        <h5 class="modal-title" id="staticBackdropLabel">
+                            2019 Raport Zintegrowany GPW
+                        </h5>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i aria-hidden="true" class="icon-close"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="navbar-nav">
+                                <a href="" class="nav-category">Nasz<br> Raport</a>
+                                <ul>
+                                    <li>
+                                        <a href="" class="nav-item">Kluczowe założenia raportu</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Zastosowane wytyczne</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Istotność</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Odpowiedzialność za raport</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Słownik</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="navbar-nav">
+                                <a href="" class="nav-category">Tworzenie wartości<br> w Grupie Kapitałowej GPW</a>
+                                <ul>
+                                    <li>
+                                        <a href="" class="nav-item">Struktura grupy kapitałowej</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Model biznesu</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Proces tworzenia wartości</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Nasze kapitały</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Kluczowe wyniki finansowe i niefinansowe</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="navbar-nav">
+                                <a href="" class="nav-category">Wyzwania dla rynku<br> giełdowego</a>
+                                <ul>
+                                    <li>
+                                        <a href="" class="nav-item">List Prezesa Zarządu</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Otoczenie zewnętrzne</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Ryzyka i szanse</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Outlook 2019&nbsp;+</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="navbar-nav">
+                                <a href="" class="nav-category">Strategia<br> #GPW2022</a>
+                                <ul>
+                                    <li>
+                                        <a href="" class="nav-item">Nasza Misja</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Cele finansowe Grupy Kapitałowej GPW na 2022&nbsp;r.</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Inicjatywy strategiczne</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Realizacja strategii</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="navbar-nav">
+                                <a href="" class="nav-category">Wyniki<br> 2018 r.</a>
+                                <ul>
+                                    <li>
+                                        <a href="" class="nav-item">Wyniki finansowe</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Wyniki operacyjne</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">GPW na GPW</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="navbar-nav">
+                                <a href="" class="nav-category">Ład<br> korporacyjny</a>
+                                <ul>
+                                    <li>
+                                        <a href="" class="nav-item">List Prezesa Rady Nadzorczej</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Władze</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Polityka wynagrodzeń</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Compliance</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Uprawnienia kontrolne i obowiązki</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="navbar-nav">
+                                <a href="" class="nav-category">Odpowiedzialna<br> Giełda</a>
+                                <ul>
+                                    <li>
+                                        <a href="" class="nav-item">Strategia CSR</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Fundacja GPW</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Dialog z interesariuszami</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Wpływ na środowisko naturalne</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bs4-xs d-block d-sm-none"></div>
+    <div class="bs4-sm d-none d-sm-block d-md-none"></div>
+    <div class="bs4-md d-none d-md-block d-lg-none"></div>
+    <div class="bs4-lg d-none d-lg-block d-xl-none"></div>
+    <div class="bs4-xl d-none d-xl-block"></div>
+
+</body>
+</html>

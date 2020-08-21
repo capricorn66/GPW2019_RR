@@ -1,0 +1,50 @@
+/* jumbotron
+*******************************************************************/
+
+.jumbotron {
+  border-radius: 0;
+  padding: 0;
+  position: relative;
+  margin-bottom: 50px;
+  background-repeat: no-repeat;
+  background-color: $app-color-1;
+  @include media-breakpoint-down(md) {
+    background-position: center center;
+    background-size: cover;
+  }
+  @include media-breakpoint-up(lg) {
+    background-position: center 68px;
+    background-size: auto 412px;
+    background-attachment: fixed;
+  }
+  .jumbotron-foreground {
+    background-size: cover;
+    background-position: center bottom;
+    color: $white;
+    .container {
+      padding-top: 60px;
+      padding-bottom: 40px;
+      min-height: 352px;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+    }
+    h1 {
+      font-weight: 300;
+      font-size: 32px;
+      strong {
+        display: block;
+        font-weight: 200;
+        font-size: 100px;
+      }
+    }
+  }
+
+  .bg {
+    padding: 50px 20px 50px 0;
+  }
+
+}

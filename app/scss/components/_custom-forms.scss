@@ -1,0 +1,181 @@
+/* custom forms
+*******************************************************************/
+
+.custom-select {
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.custom-radio,
+.custom-checkbox {
+  .custom-control-label::before,
+  .custom-control-input:checked ~ .custom-control-label::before,
+  .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    border: 1px solid $app-color-1;
+    background-color: transparent;
+  }
+}
+
+.page-section {
+  .custom-radio,
+  .custom-checkbox {
+    .custom-control-label::before,
+    .custom-control-input:checked ~ .custom-control-label::before,
+    .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+      border: 1px solid $white;
+      background-color: transparent;
+    }
+  }
+}
+
+.custom-radio {
+  .custom-control-label::after {
+    border-radius: 50%;
+  }
+  .custom-control-input:checked ~ .custom-control-label::after,
+  .custom-control-input:not(:disabled):active ~ .custom-control-label::after {
+    background: $app-color-2;
+  }
+}
+
+.custom-checkbox {
+  .custom-control-input:checked ~ .custom-control-label::before {
+    background: $app-color-2;
+    border-color: $app-color-2;
+  }
+  .custom-control-input:checked ~ .custom-control-label::after {
+    content: "\e906";
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: transparent;
+    color: $white;
+  }
+}
+
+.page-section {
+  .custom-checkbox {
+    .custom-control-input:checked ~ .custom-control-label::before {
+      background: $app-color-1;
+    }
+  }
+}
+
+.custom-radio-lg,
+.custom-checkbox-lg {
+  padding-left: 45px;
+  .custom-control-label {
+    line-height: 1.5em;
+    &::after {
+      width: 14px;
+      height: 14px;
+      left: -37px;
+      top: 6px;
+    }
+    &::before {
+      width: 30px;
+      height: 30px;
+      left: -45px;
+      top: -2px;
+    }
+  }
+}
+
+.custom-checkbox-lg {
+  .custom-control-label {
+    &::after {
+      left: -39px;
+      top: 5px;
+    }
+  }
+}
+
+.radio-rating {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: reverse !important;
+  -ms-flex-direction: row-reverse !important;
+  flex-direction: row-reverse !important;
+  -webkit-box-pack: end !important;
+  -ms-flex-pack: end !important;
+  justify-content: flex-end !important;
+  padding: 0;
+  .custom-control-input {
+    position: absolute;
+    &:checked ~ .custom-control-label {
+      background: $app-color-2;
+      border-color: $app-color-2;
+      color: $white;
+      .darkTheme & {
+        background: $app-color-1;
+        color: black;
+      }
+    }
+  }
+  .custom-control-label {
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    font-size: 24px;
+    width: 94px;
+    height: 54px;
+    border-radius: 14px;
+    display: inline-block;
+    padding: 11px 6px;
+    text-align: center;
+    border: 1px solid $app-color-1;
+    background: $white;
+    color: $app-color-1;
+    @include media-breakpoint-down(sm) {
+      margin: 0 5px 5px 0;
+    }
+    @include media-breakpoint-between(md,lg) {
+      margin: 0 10px 10px 0;
+    }
+    @include media-breakpoint-up(xl) {
+      margin: 0 15px 15px 0;
+    }
+    .darkTheme & {
+      background: $gray-800;
+      color: $gray-300;
+    }
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.custom-file-label {
+  border-radius: 0;
+  padding-right: 160px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
+  @include media-breakpoint-down(xs) {
+    padding-right: 120px;
+  }
+  &::after {
+    background-color: $gray-600;
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 0;
+    @include media-breakpoint-down(xs) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}

@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <title>GPW - RAPORT ROCZNY 2019</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav class="navbar align-items-center">
+
+                <a class="brand" href="#">
+                    <img src="./images/GPW.svg" alt="GPW">
+                </a>
+
+                <ul class="nav-tools">
+                    <li class="nav-item active">
+                        <a class="nav-link nav-link-lang mr-20" href="#">EN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" role="button" href="#">
+                            <i class="icon-text-size"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" role="button" href="#">
+                            <i class="icon-contrast"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" role="button" class="nav-link" data-toggle="modal" data-target="#searchModal">
+                            <i class="icon-search"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ml-10 ml-sm-30" role="button" href="#" data-toggle="modal" data-target="#menuModal">
+                            <i class="icon-menu"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
+    <div class="jumbotron" style="background-image: url('images/jumbotron-background-2.jpg')">
+        <div class="jumbotron-foreground" style="background-image: url('images/jumbotron-foreground-1.png')">
+            <div class="container">
+                <h1><strong>2019</strong>Raport Zintegrowany GPW</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Strona główna</a></li>
+                        <li class="breadcrumb-item"><a href="#">Wyzwania dla rynku giełdowego</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">List Prezesa Zarządu</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <aside class="aside-navbar">
+            <nav class="aside-nav">
+                <a href="" class="aside-link active">List Prezesa Zarządu</a>
+                <a href="" class="aside-link">Otoczenie zewnętrzne</a>
+                <a href="" class="aside-link">Ryzyka i szanse</a>
+                <a href="" class="aside-link">Outlook 2019 +</a>
+            </nav>
+            <div class="aside-extras">
+                <h4>Przeczytaj <br> również...</h4>
+                <a href="" class="aside-link">Realizacja strategii</a>
+                <a href="" class="aside-link">Inicjatywy strategiczne</a>
+            </div>
+        </aside>
+        <aside class="aside-tools">
+            <ul class="tools-nav">
+                <li class="tools-item">
+                    <span class="tip" data-title="Czytaj"></span>
+                    <button class="tools-link" data-toggle="dropdown" id="tools-audio" aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-cupboard"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="tools-audio">
+                        <a href="javascript:void(0)"><span class="link-name">Przejdź<br> do schowka</span></a>
+                        <a href="javascript:void(0)"><span class="link-name">Dodaj<br> do schowka</span></a>
+                    </div>
+                </li>
+                <li class="tools-item">
+                    <span class="tip" data-title="Udostępnij"></span>
+                    <button class="tools-link" data-toggle="dropdown" id="tools-social" aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-share"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="tools-social">
+                        <a href="" target="_blank"><span class="link-name"><i class="icon-social-facebook"></i></span></a>
+                        <a href="" target="_blank"><span class="link-name"><i class="icon-social-twitter"></i></span></a>
+                    </div>
+                </li>
+                <li class="tools-item">
+                    <span class="tip" data-title="Porównaj"></span>
+                    <button class="tools-link" data-toggle="dropdown" id="tools-history" aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-tools"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="tools-history">
+                        <a href="" target="_blank"><span class="link-name">2017</span></a>
+                        <a href="" target="_blank"><span class="link-name">2018</span></a>
+                    </div>
+                </li>
+                <li class="tools-item">
+                    <span class="tip" data-title="Słownik"></span>
+                    <button class="tools-link" data-toggle="dropdown" id="tools-dictionary" aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-dictionary"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="tools-dictionary">
+                        <a href="javascript:void(0)" id="dictionary_on"><span class="link-name">Włącz</span></a>
+                        <a href="javascript:void(0)" id="dictionary_off"><span class="link-name">Wyłącz</span></a>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+        <main>
+            <article class="pb-100">
+                <h1>List Prezesa Zarządu</h1>
+
+                <div class="page-section" style="background-image: url('images/letter-lead-bg.jpg');">
+                    <div class="row">
+                        <div class="col-8 col-md-6 col-xl-5 order-xl-1 ml-30 ml-md-40 ml-xl-0">
+                            <img src="images/letter-president.jpg" class="img-fluid mt-50 mt-xxl-0"/>
+                        </div>
+                        <div class="col-xl-7 d-flex pt-70">
+                            <div class="page-section-body">
+                                <h2>Szanowni Państwo, Drodzy Akcjonariusze i Inwestorzy,</h2>
+                                <p>Z przyjemnością prezentuję Państwu Raport Roczny GK GPW, sporządzony po raz pierwszy w formie zintegrowanej zgodnie z Międzynarodowymi Założeniami Koncepcyjnymi Sprawozdawczości Zintegrowanej (The International Integrated Reporting Framework), opracowanymi przez Międzynarodową Radę ds. Sprawozdawczości Zintegrowanej (the International Integrated Reporting Council – IIRC). </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <p>Koncentrując się na ujawnieniu kluczowych kwestii związanych z działalnością GK GPW, w tym wykorzystywanych zasobów, modelu biznesu, strategii i dokonań, ukazanych w perspektywie otoczenia zewnętrznego i przewidywanych trendów makroekonomicznych, niniejszy raport przyjmuje za cel ujawnienie sposobu kreowania wartości dla naszych interesariuszy. Rok 2018 jest pierwszym, w którym podjęliśmy się tego ambitnego wyzwania w zakresie raportowania korporacyjnego.</p>
+                <p>Mam nadzieję, że lektura przygotowanego raportu spełni Państwa oczekiwania w zakresie wiarygodnej, użytecznej i przyjaznej informacji, a doświadczenia zebrane przy opracowaniu raportu pozwolą nam, jako największej giełdzie w regionie i liczącemu graczowi w Europie, na ukształtowanie własnego podejścia do raportowania zintegrowanego.</p>
+                <p>Rok 2018 obfitował w wiele wydarzeń natury ekonomicznej, które w bardzo różnym stopniu miały wpływ na warszawską giełdę i cały rynek kapitałowy w Polsce. Na giełdzie był w dużej mierze czasem podejmowania decyzji, które teraz są wcielane w życie.</p>
+                <p>Jestem przekonany, że solidnym fundamentem do podjęcia się nowych zadań jest zaktualizowana w czerwcu 2018 r. Strategia#GPW2022, w ramach której uruchomimy kilkanaście inicjatyw rozwojowych. 2018 rok zamknęliśmy skonsolidowanym zyskiem netto na poziomie 183,7 mln zł (+15,7% niż w rekordowym 2017 r.) przy 346,8 mln zł przychodów ze sprzedaży (o 1,5% mniej r/r). Wynik z działalności operacyjnej w ujęciu rocznym sięgnął 170,2 mln zł w porównaniu do 186,5 mln zł w 2017 r. EBITDA osiągnęła 202,0 mln zł, o 6% mniej wobec 2017 r. Na wyniki finansowe Grupy GPW wpłynęły m.in. przychody finansowe ze sprzedaży akcji spółki stowarzyszonej Aquis Exchange.</p>
+                <p>W naszych biznesach szukamy potencjalnych synergii, które zaowocują wysoką stopą zwrotu dla spółki. Takimi kryteriami będziemy się kierować w nadchodzących latach, gdzie zamierzamy koncentrować się na rozwoju technologicznym oraz dywersyfikacji źródeł przychodów. W 2018 r. wypłaciliśmy ponad 92,338 mln zł dywidendy ze skonsolidowanego zysku netto za 2017 r. (skorygowanego o udziały jednostek stowarzyszonych). Sumarycznie na przestrzeni ostatnich ośmiu lat wartość wypłaconej akcjonariuszom dywidendy sięgnęła ponad 660 mln zł. Celem Zarządu GPW jest utrzymanie obowiązującej polityki dywidendowej w kolejnych latach i zapewnienie odpowiedniej weryfikacji do oczekiwań akcjonariuszy stopy rentowności dywidendy.</p>
+                <p>Rok 2018 zapisał się rekordowo w historii Towarowej Giełdy Energii, spółki z grupy GPW, pod względem obrotu energią elektryczną i gazem ziemnym. Wolumen obrotu energią elektryczną wyniósł 226 TWh, o 102,5% więcej wobec 2017 r. i był to najlepszy wynik w historii notowań TGE dla rynków spot i terminowego. Całkowity wolumen transakcji zawartych na rynkach gazu ziemnego w 2018 r. wyniósł 143,3 TWh (wzrost r/r o 3,4 proc.), co także było rekordem dla giełdy towarowej.</p>
+                <p>Chciałbym, by rok 2018 został w pamięci inwestorów i emitentów jako ten, który przyniósł warszawskiej giełdzie ważne wydarzenia i rekordy. Przypomnę, że zaczęliśmy go od przebicia historycznej bariery na indeksie WIG - 67 933 pkt - na sesji 23 stycznia. Z kolei we wrześniu zanotowaliśmy rekordową sesję pod względem obrotów akcjami - 5,4 mld zł. Drugi rekord był niewątpliwie związany z jednym z najważniejszych wydarzeń gospodarczych w Polsce ostatnich lat, a mianowicie zakwalifikowaniu naszego kraju do rynków rozwiniętych przez agencję indeksową FTSE Russell. Dzięki temu wydarzeniu konkurujemy z 24 najbardziej rozwiniętymi krajami świata, takimi jak Stany Zjednoczone, Wielka Brytania, Niemcy, Francja, Japonia czy Australia. To docenienie rozwoju polskiej gospodarki, ale także rynku kapitałowego i ważny krok w jego rozwoju.</p>
+                <p>A skoro mowa o rozwoju giełdy, to fundamentem do tego są inicjatywy strategiczne, w tym m.in. Rozwój Rynku Pierwotnego (GPW Growth), System Pożyczek Papierów Wartościowych, Rozwój Instrumentów Pochodnych, GPW Private Market, Rozwój Rynku BondSpot, rozwój wskaźników rynku finansowego oraz świadczenie usług w zakresie ratingu. Jak widać, stawiamy na dywersyfikację biznesu, ponieważ chcemy być skuteczni, a to osiągniemy ulepszając dotychczasowe produkty i inwestując w nowe linie biznesowe. Potencjał widzimy m.in. w rynku obligacji korporacyjnych BondSpot, który zamierzamy aktywizować i rozwijać.</p>
+                <p>Jesteśmy przekonani, że rozwój musi iść w parze z rozwiązaniami technologicznymi na najwyższym poziomie, jak integracja arkusza zleceń, wystawianie papierów w modelu „zapytanie o kwotowanie”. W ten plan wpisuje się Polska Agencja Ratingowa, utworzona wspólnie z Polskim Funduszem Rozwoju i Biurem Informacji Kredytowej na bazie utworzonego przez GPW Instytutu Analiz i Ratingu, która ma wspierać rozwój bezpiecznego i przejrzystego rynku obligacji i prawdopodobnie pierwszą ocenę wyda jeszcze w tym roku.</p>
+                <p>Nadchodzące kwartały będą czasem rozpoczęcia działalności Private Market dla spółek na początkowym etapie rozwoju. To nasz pomysł na rozwój technologiczny, w tym technologię blockchain. To nie jest nasze ostatnie słowo. Zamierzamy bowiem zaprezentować nowe pomysły, inicjatywy i rozwiązania technologiczne. Szykujemy się do uruchomienia GPW Ventures, funduszu mającego inwestować w fundusze venture capital, które mogą wychodzić z inwestycji poprzez giełdę. Nadzieje pokładamy także w GPW Growth, programie szkoleniowym dla firm, który ma na celu zainteresować giełdą i przygotować do debiutu giełdowego. Przypomnę, że w grudniu 2018 r. rozpoczęliśmy obliczanie i publikację trzech indeksów: WIG20dvp, mWIG40dvp oraz sWIG80dvp (oparte na dochodach z dywidend pieniężnych wypłacanych przez spółki z indeksów bazowych WIG20, mWIG40, sWIG80). A w planach mamy kolejne indeksy oraz oparte na nie fundusze ETF   , np. na mWIG40, indeks regionalny i inne. Jednocześnie nie zapominamy o podstawowym biznesie giełdy, który dziś mamy rozwinięty, ale zawsze może być jeszcze udoskonalony.</p>
+                <p>Mamy do dyspozycji ponad 566 mln zł gotówki na poziomie Grupy (stan na koniec 2018 r.), pozwala nam to z optymizmem patrzeć na potencjalne projekty strategiczne i daje duże pole manewru. Wierzę, że ten rok będzie sprzyjał giełdzie, chociażby ze względu na wejście w życie ustawy o PPK. W tym roku powinien pojawić się pierwszy zastrzyk kapitału na rynek pochodzący z PPK. To, co dobrze rokuje, to finalizowana rządowa Strategii Rozwoju Rynku Kapitałowego. Akcjonariuszom Giełdy, wszystkim inwestorom i emitentom dziękuję za miniony rok, życzę dobrego, obfitującego w sukcesy zawodowe 2019 roku.</p>
+                <p>Z poważaniem,<br>
+                    <strong>Marek Dietl, Prezes Zarządu GPW</strong></p>
+
+            </article>
+            <hr class="my-50">
+
+            <div class="d-flex justify-content-between mb-30">
+                <a href="" class="link font-18 pr-10">Poprzednia strona</a>
+                <a href="" class="link font-18 pl-10 text-right">Następna strona</a>
+            </div>
+
+            <hr class="my-50 d-xxl-none">
+
+            <div class="d-flex justify-content-between flex-column flex-xl-row justify-content-between">
+                <a href="" class="d-flex align-items-center link font-22 mb-30">
+                    <i class="icon-arrow-left font-60 mr-20 app-color-1"></i>
+                    <span>Kluczowe wyniki finansowe i niefinansowe</span>
+                </a>
+                <a href="" class="d-flex align-items-center link font-22 mb-30 text-right ml-auto">
+                    <span>Otoczenie zewnętrzne</span>
+                    <i class="icon-arrow-right font-60 ml-20 app-color-1"></i>
+                </a>
+            </div>
+
+        </main>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 text-center">
+                    <a href="" class="nav-link">
+                        <i class="icon-financial-statements font-80"></i>
+                        Skonsolidowane sprawozdanie finansowe GK GPW 2019
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 text-center">
+                    <a href="" class="nav-link">
+                        <i class="icon-documents font-80"></i>
+                        Centrum dokumentów
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 text-center">
+                    <a href="" class="nav-link">
+                        <i class="icon-tables-and-charts font-80"></i>
+                        Centrum tabel i wykresów
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 text-center">
+                    <a href="" class="nav-link">
+                        <i class="icon-media font-80"></i>
+                        Centrum multimediów
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 text-center">
+                    <a href="" class="nav-link">
+                        <i class="icon-questionnaire font-80"></i>
+                        Ankieta
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 text-center">
+                    <a href="" class="nav-link">
+                        <i class="icon-KPI font-80"></i>
+                        Interaktywne KPI
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container d-flex flex-column flex-sm-row align-items-sm-center">
+                <p class="mb-20 mb-sm-0">Raport Roczny GPW został przygotowany zgodnie z wytycznymi International Integrated Reporting
+                    Council.</p>
+                <div class="footer-bottom-nav ml-sm-auto no-wrap pl-sm-40">
+                    <a href="" class="footer-bottom-link">
+                        <i class="icon-social-twitter"></i>
+                    </a>
+                    <a href="" class="footer-bottom-link">
+                        <i class="icon-social-facebook"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cookies">
+        <div class="container d-flex flex-column flex-sm-row">
+            <i class="icon-cookie mr-30"></i>
+            <div class="mr-20">
+                <strong class="h4">Ważne: Strona wykorzystuje pliki cookies.</strong>
+                <p class="mb-20 mb-md-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vulputate blandit nunc nec bibendum. Aenean rutrum dui est, eu luctus arcu condimentum vel. Nam in ornare urna, sagittis finibus nisl. Nulla facilisi. In pulvinar egestas purus id sodales. Vivamus a velit et lorem luctus maximus. Fusce dictum sapien sed ipsum euismod ultrices. Sed diam odio, bibendum vitae elit eu, suscipit ultricies nisl. Nullam malesuada neque eu risus efficitur aliquet.   <a href="">Polityce Cookies</a>".</p>
+            </div>
+            <div class="ml-sm-auto align-self-sm-end">
+                <a class="btn btn-primary">Zamknij</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Search -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content modal-search">
+
+                <div class="input-group input-group-lg">
+                    <input type="text" class="form-control border-0" placeholder="Szukaj" aria-label="Wyszukaj w serwisie">
+                    <div class="input-group-append">
+                        <button class="btn" type="button" id="button-addon2">
+                            <i class="icon-search app-color-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="icon-close white"></span>
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Menu -->
+    <div class="modal fade" id="menuModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-menu">
+            <div class="modal-content">
+                <div class="modal-header no-gutters flex-wrap">
+                    <div class="col-6 col-lg-3">
+                        <span class="brand">
+                            <img src="./images/GPW-white.svg" alt="GPW">
+                        </span>
+                    </div>
+                    <div class="col-lg-6 order-last order-lg-0">
+                        <h5 class="modal-title" id="staticBackdropLabel">
+                            2019 Raport Zintegrowany GPW
+                        </h5>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i aria-hidden="true" class="icon-close"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="navbar-nav">
+                                <a href="" class="nav-category">Nasz<br> Raport</a>
+                                <ul>
+                                    <li>
+                                        <a href="" class="nav-item">Kluczowe założenia raportu</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Zastosowane wytyczne</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Istotność</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Odpowiedzialność za raport</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Słownik</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="navbar-nav">
+                                <a href="" class="nav-category">Tworzenie wartości<br> w Grupie Kapitałowej GPW</a>
+                                <ul>
+                                    <li>
+                                        <a href="" class="nav-item">Struktura grupy kapitałowej</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Model biznesu</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Proces tworzenia wartości</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Nasze kapitały</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Kluczowe wyniki finansowe i niefinansowe</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="navbar-nav">
+                                <a href="" class="nav-category">Wyzwania dla rynku<br> giełdowego</a>
+                                <ul>
+                                    <li>
+                                        <a href="" class="nav-item">List Prezesa Zarządu</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Otoczenie zewnętrzne</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Ryzyka i szanse</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Outlook 2019&nbsp;+</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="navbar-nav">
+                                <a href="" class="nav-category">Strategia<br> #GPW2022</a>
+                                <ul>
+                                    <li>
+                                        <a href="" class="nav-item">Nasza Misja</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Cele finansowe Grupy Kapitałowej GPW na 2022&nbsp;r.</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Inicjatywy strategiczne</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Realizacja strategii</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="navbar-nav">
+                                <a href="" class="nav-category">Wyniki<br> 2018 r.</a>
+                                <ul>
+                                    <li>
+                                        <a href="" class="nav-item">Wyniki finansowe</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Wyniki operacyjne</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">GPW na GPW</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="navbar-nav">
+                                <a href="" class="nav-category">Ład<br> korporacyjny</a>
+                                <ul>
+                                    <li>
+                                        <a href="" class="nav-item">List Prezesa Rady Nadzorczej</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Władze</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Polityka wynagrodzeń</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Compliance</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Uprawnienia kontrolne i obowiązki</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="navbar-nav">
+                                <a href="" class="nav-category">Odpowiedzialna<br> Giełda</a>
+                                <ul>
+                                    <li>
+                                        <a href="" class="nav-item">Strategia CSR</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Fundacja GPW</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Dialog z interesariuszami</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="nav-item">Wpływ na środowisko naturalne</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bs4-xs d-block d-sm-none"></div>
+    <div class="bs4-sm d-none d-sm-block d-md-none"></div>
+    <div class="bs4-md d-none d-md-block d-lg-none"></div>
+    <div class="bs4-lg d-none d-lg-block d-xl-none"></div>
+    <div class="bs4-xl d-none d-xl-block"></div>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+/* forms
+*******************************************************************/
+
+.form-control {
+  border-radius: 0;
+  &:disabled,
+  &[readonly] {
+    background: $gray-200;
+  }
+}
+
+.input-group-text {
+  border: 0;
+  color: $gray-900;
+  background: transparent;
+  a[data-toggle="popover"] {
+    cursor: pointer;
+    color: $gray-900;
+    &:hover {
+      text-decoration: none;
+      color: $gray-900;
+    }
+  }
+}
+
+.form-group {
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+textarea.form-control {
+  min-height: 92px;
+}
+.form-control {
+  font-size: .97rem;
+  &:focus {
+    border-color: $app-color-2;
+  }
+}
+
+.search-group.input-group {
+  .form-control {
+    border-right: 0;
+    &:focus {
+      border-color: $app-color-2;
+      + .input-group-append {
+        border-color: $app-color-2;
+      }
+    }
+  }
+  .input-group-append {
+    border: 1px solid $gray-400;
+    border-left: 0;
+    i {
+      font-size: 22px;
+      color: $app-color-1;
+    }
+  }
+}
+

@@ -1,0 +1,469 @@
+/* main
+*******************************************************************/
+
+*:focus {
+  box-shadow: none !important;
+}
+
+main {
+  color: $body-color;
+  padding-bottom: 60px;
+  line-height: 1.6;
+  font-weight: 300;
+  font-size: 18px;
+
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 300;
+  }
+
+  h1 {
+    font-size: 40px;
+    margin-bottom: 45px;
+  }
+  h2 {
+    font-size: 36px;
+    margin-bottom: .8em;
+  }
+  h3 {
+    font-size: 30px;
+    margin-bottom: 1em;
+  }
+  h4 {
+    font-size: 24px;
+    margin-bottom: 1em;
+  }
+  h5 {
+    font-size: 20px;
+    margin-bottom: 1em;
+    font-weight: 400;
+  }
+  h6 {
+    font-size: 16px;
+    margin-bottom: 1em;
+    font-weight: 400;
+  }
+
+  ul + h1,
+  ul + h2,
+  ul + h3,
+  ul + h4,
+  ul + h5,
+  ul + h6,
+  p + h1,
+  p + h2,
+  p + h3,
+  p + h4,
+  p + h5,
+  p + h6 {
+    margin-top: 1.6em;
+  }
+
+  hr {
+    border-top-color: $app-color-1;
+  }
+
+  blockquote {
+    border-left: 1px solid $app-color-1;
+    padding: 20px 0 20px 40px;
+    margin: 30px 0 50px;
+    font-weight: 400;
+    font-size: 26px;
+    font-style: italic;
+    line-height: 1.3em;
+  }
+
+  .lead {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.4em;
+    &::after {
+      content: "";
+      height: 1px;
+      background: $app-color-1;
+      display: block;
+      margin: 50px 0;
+      width: 120px;
+    }
+  }
+
+  ul:not([class]) {
+    list-style: none;
+    padding-left: 28px;
+    margin-bottom: 40px;
+    li {
+      margin-bottom: .5rem;
+      &::before {
+        content: "\2022";
+        color: $app-color-1;
+        font-weight: bold;
+        display: inline-block;
+        width: 25px;
+        margin-left: -25px;
+        font-size: 30px;
+        line-height: 0;
+        top: 4px;
+        position: relative;
+      }
+    }
+  }
+
+  label,
+  .col-form-label {
+    font-weight: 400;
+    line-height: 1.2em;
+  }
+
+  .check-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .dictionary {
+    .dictionary-group {
+      &::before {
+        content: attr(data-letter);
+        position: sticky;
+        top: 100px;
+        font-weight: 300;
+        float: left;
+        text-align: center;
+        @include media-breakpoint-up(xl) {
+          margin-left: -240px;
+          width: 160px;
+          font-size: 46px;
+        }
+        @include media-breakpoint-between(md,lg) {
+          margin-left: -120px;
+          width: 80px;
+          font-size: 42px;
+        }
+        @include media-breakpoint-down(sm) {
+          margin-left: -90px;
+          width: 60px;
+          font-size: 38px;
+        }
+        color: $app-color-1;
+      }
+      position: relative;
+      border-left: 1px solid $app-color-1;
+      @include media-breakpoint-up(xl) {
+        padding-left: 80px;
+        margin-left: 160px;
+      }
+      @include media-breakpoint-between(md,lg) {
+        padding-left: 40px;
+        margin-left: 80px;
+      }
+      @include media-breakpoint-down(sm) {
+        padding-left: 30px;
+        margin-left: 60px;
+      }
+    }
+  }
+
+  .nav-tabs {
+    border: 0;
+    .nav-item {
+      .nav-link {
+        &.active {
+          color: $app-color-1;
+        }
+        color: rgba($app-color-1,.5);
+        border: 0;
+        i {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+
+  .page-section {
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      width: 100vw;
+      background-image: inherit;
+      background-position: center;
+      background-size: cover;
+      background-color: $app-color-1;
+      @include media-breakpoint-up(xxl) {
+        left: calc((1430px/2) - 50vw);
+      }
+      @include media-breakpoint-only(xl) {
+        left: calc((1110px/2) - 50vw);
+      }
+      @include media-breakpoint-only(lg) {
+        left: calc((930px/2) - 50vw);
+      }
+      @include media-breakpoint-only(md) {
+        left: calc((690px/2) - 50vw);
+      }
+      @include media-breakpoint-only(sm) {
+        left: calc((510px/2) - 50vw);
+      }
+      @include media-breakpoint-only(xs) {
+        left: calc((100%/2) - 50vw);
+      }
+      height: 100%;
+    }
+    position: relative;
+    margin-bottom: 50px;
+    background-size: 0;
+    color: $white;
+
+    .nav-tabs {
+      border: 0;
+      margin-bottom: 18px;
+      .nav-item {
+        margin-right: 20px;
+        margin-bottom: 10px;
+        .nav-link {
+          border: 1px solid $white;
+          font-size: 24px;
+          color: $white;
+          border-radius: 0;
+          min-height: 62px;
+          padding: 13px 32px;
+          &.active {
+            background-color: $app-color-1;
+          }
+        }
+      }
+    }
+
+    .page-section-body {
+      h2 {
+        top: -10px;
+        position: relative;
+      }
+
+      .box-link {
+        border: 1px solid $white;
+        display: block;
+        padding: 15px 20px;
+        color: $white;
+        line-height: 1.3em;
+        text-decoration: none;
+        height: 100%;
+        @include transition(background-color ease-in .2s);
+        i {
+          display: block;
+          font-size: 60px;
+          margin-bottom: 20px;
+        }
+        &:focus,
+        &:hover {
+          background-color: $app-color-2;
+        }
+      }
+
+      .nav-tabs {
+        padding-top: 10px;
+        margin-bottom: 5px;
+        .nav-item {
+          .nav-link {
+            font-size: 18px;
+            min-height: 28px;
+            padding: 8px 24px;
+          }
+        }
+      }
+
+      .kpi-dates {
+        margin-bottom: -30px;
+
+        @include media-breakpoint-down(sm) {
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          .checkbox-list {
+            margin-top: 20px;
+            flex: 1 0 100%;
+            min-width: 100%;
+          }
+        }
+
+      }
+
+      padding-bottom: 30px;
+      border-left: 1px solid $white;
+      padding-left: 30px;
+      @include media-breakpoint-up(md) {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+
+    .nav-scroll {
+      margin: 0 -10px;
+      .nav-pills {
+        .nav-item {
+          margin: 0 10px;
+          .nav-link {
+            border-color: $white;
+            border-radius: 0;
+            padding: 30px 15px;
+            min-width: 240px;
+            color: $white;
+            span {
+              display: block;
+              line-height: 1.2em;
+            }
+
+            @include media-breakpoint-down(sm) {
+              padding: 20px 10px;
+              min-width: 180px;
+              img {
+                width: 60px;
+                margin-bottom: 12px;
+              }
+              span {
+                font-size: 16px;
+              }
+            }
+
+            @include media-breakpoint-between(md,lg) {
+              padding: 20px 15px;
+              min-width: 200px;
+              img {
+                width: 80px;
+                margin-bottom: 16px;
+              }
+              span {
+                font-size: 18px;
+              }
+            }
+
+            @include media-breakpoint-up(xl) {
+              padding: 30px 15px;
+              min-width: 240px;
+              img {
+                width: 100px;
+                margin-bottom: 20px;
+              }
+              span {
+                font-size: 22px;
+              }
+            }
+
+          }
+        }
+      }
+    }
+
+  }
+
+  .aside-tools + & {
+    .page-section {
+      &::before {
+        @include media-breakpoint-up(xxl) {
+          left: calc(((1320px + 110px)/2) - 50vw);
+        }
+        @include media-breakpoint-only(xl) {
+          left: calc(((1140px - 30px)/2) - 50vw);
+        }
+        @include media-breakpoint-only(lg) {
+          left: calc(((960px - 30px)/2) - 50vw);
+        }
+        @include media-breakpoint-only(md) {
+          left: calc(((720px - 30px)/2) - 50vw);
+        }
+        @include media-breakpoint-only(sm) {
+          left: calc(((540px - 30px)/2) - 50vw);
+        }
+        @include media-breakpoint-only(xs) {
+          left: calc((100%/2) - 50vw);
+        }
+      }
+    }
+  }
+
+  .aside-navbar + .aside-tools + & {
+    .page-section {
+      &::before {
+        @include media-breakpoint-up(xxl) {
+          left: calc(((1540px - 630px)/2) - 50vw);
+        }
+        @include media-breakpoint-only(xl) {
+          left: calc(((1140px - 550px)/2) - 50vw);
+        }
+        @include media-breakpoint-only(lg) {
+          left: calc(((960px - 550px)/2) - 50vw);
+        }
+        @include media-breakpoint-only(md) {
+          left: calc(((720px - 30px)/2) - 50vw);
+        }
+        @include media-breakpoint-only(sm) {
+          left: calc(((540px - 30px)/2) - 50vw);
+        }
+        @include media-breakpoint-only(xs) {
+          left: calc((100%/2) - 50vw);
+        }
+      }
+    }
+  }
+
+  .server-error {
+    text-align: center;
+    padding: 60px 0;
+    .server-error-head {
+      font-size: 160px;
+      @include media-breakpoint-down(xs) {
+        font-size: 120px;
+      }
+      font-weight: 600;
+      position: relative;
+      color: rgba($gray-300,.6);
+      letter-spacing: -.02em;
+      transform: translateX(1%);
+      &::after {
+        content: ".";
+        color: $app-color-1;
+        text-shadow: -4px -4px white, 0 -5px white, -5px 0 white, 5px -5px white, -5px 5px white;
+        @include media-breakpoint-down(xs) {
+          text-shadow: -2px -2px white, 0 -3px white, -3px 0 white, 3px -3px white, -3px 3px white;
+        }
+        display: inline-block;
+        transform: translateX(-70%);
+      }
+    }
+  }
+
+  .box-hr {
+    @include media-breakpoint-only(sm) {
+      padding-left: 20px;
+    }
+    @include media-breakpoint-between(md,lg) {
+      padding-left: 60px;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-left: 120px;
+    }
+    padding-top: 30px;
+    &::after {
+      content: "";
+      height: 1px;
+      background: $app-color-1;
+      display: block;
+      @include media-breakpoint-only(xs) {
+        margin: 50px 0 20px;
+        width: 120px;
+      }
+      @include media-breakpoint-only(sm) {
+        margin: 50px 0 20px -20px;
+        width: 120px;
+      }
+      @include media-breakpoint-between(md,lg) {
+        margin: 50px 0 20px -60px;
+        width: 180px;
+      }
+      @include media-breakpoint-up(xl) {
+        margin: 50px 0 20px -120px;
+        width: 220px;
+      }
+    }
+  }
+
+}
