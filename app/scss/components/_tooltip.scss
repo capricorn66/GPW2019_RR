@@ -1,0 +1,11 @@
+/* tooltip
+*******************************************************************/
+
+
+// Wrapper for the tooltip content
+.tooltip-inner {
+  padding: $tooltip-padding-y $tooltip-padding-x;
+  text-align: left;
+  background-color: $tooltip-bg;
+  @include border-radius($tooltip-border-radius);
+}

@@ -152,6 +152,16 @@
     }
 }
 
+.row.gutter-xl {
+    margin-left: -60px;
+    margin-right: -60px;
+    > [class^="col-"],
+    > [class^=" col-"] {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+
 .link {
     line-height: 1.3em;
     text-decoration: none;
@@ -172,5 +182,19 @@
     &:hover {
         text-decoration: none;
         opacity: .9;
+    }
+}
+
+.col-vr {
+    flex: 0 0 0;
+    position: relative;
+    padding: 0 !important;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: $app-color-1;
     }
 }

@@ -1,7 +1,6 @@
 // JavaScript Document
 
 import $ from "jquery";
-import Swiper from "swiper";
 import debounce from 'lodash.debounce';
 import "./hasAttr";
 import {rwdMedia} from "./rwdMedia";
@@ -27,8 +26,9 @@ window.bsCustomFileInput = bsCustomFileInput;
 window.addBackToTop = addBackToTop;
 window.lightbox = lightbox;
 
-$(document).ready(function(e) {
+import './home';
 
+document.addEventListener('DOMContentLoaded', function(){
 
     window.onscroll = function() {handleHeader()};
     handleHeader();
@@ -48,48 +48,9 @@ $(document).ready(function(e) {
         $("#videoModal iframe").attr("src", $("#videoModal iframe").attr("src"));
     });
 
-});
+    $('[data-toggle="tooltip"]').tooltip();
 
-function toggle(source) {
-    const checkboxes = document.getElementsByClassName('toggle-checkbox');
-    for (let i = 0; i < checkboxes.length; i++) {
-        if (checkboxes[i] !== source)
-            checkboxes[i].checked = source.checked;
-    }
-}
-
-window.toggle = toggle;
-
-function hideOnClickOutside(element) {
-
-    const outsideClickListener = event => {
-        if (!element.contains(event.target) && isVisible(element)) {
-            $(element).collapse('hide');
-            removeClickListener()
-        }
-    };
-
-    const onEscListener = event => {
-        if( event.key === 'Escape' || event.key === 'Esc' || event.keyCode === 27 ) {
-            if (isVisible(element)) {
-                $(element).collapse('hide');
-                removeClickListener()
-            }
-        }
-    };
-
-    const removeClickListener = () => {
-        document.removeEventListener('click', outsideClickListener);
-        document.removeEventListener('keydown', onEscListener);
-    };
-
-    document.addEventListener('click', outsideClickListener);
-    document.addEventListener('keydown', onEscListener,);
-
-}
-
-const isVisible = elem => !!elem && !!( elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length );
-
+}, false);
 
 function handleHeader() {
     if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {

@@ -84,3 +84,10 @@ $spacers: map-merge(
     ),
     $spacers
 );
+
+// Spacing
+$tooltip-arrow-color: $app-color-2;
+$tooltip-bg: $app-color-2;
+$tooltip-padding-y: 15px;
+$tooltip-padding-x: 15px;
+$tooltip-border-radius: 8px;

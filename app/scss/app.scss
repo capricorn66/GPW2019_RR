@@ -2,7 +2,7 @@
 /* CSS Document */
 
 @import "~lightbox2/src/css/lightbox.css";
-
+@import "~fullpage.js/dist/fullpage.css";
 
 @import "utilities/variables";
 @import "utilities/mixins";
@@ -57,7 +57,7 @@ $container-max-widths: (
 @import "~bootstrap/scss/modal";
 @import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/print";
-@import "~bootstrap/scss/popover";
+@import "~bootstrap/scss/tooltip";
 
 
 @import "components/reboot";
@@ -84,6 +84,7 @@ $container-max-widths: (
 @import "components/pagination";
 @import "components/swiper";
 @import "components/modal";
+@import "components/tooltip";
 
 @import '~swiper/src/swiper.scss';
 @import '~swiper/src/components/effect-fade/effect-fade.scss';

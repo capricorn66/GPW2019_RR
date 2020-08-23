@@ -107,6 +107,18 @@ main {
     }
   }
 
+  .dictionary {
+    color: $app-color-2;
+    i {
+      position: relative;
+      top: -2px;
+      left: -3px;
+    }
+    .darkTheme & {
+      color: $dark-color-2;
+    }
+  }
+
   label,
   .col-form-label {
     font-weight: 400;
