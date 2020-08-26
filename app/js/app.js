@@ -6,7 +6,6 @@ import "./hasAttr";
 import {rwdMedia} from "./rwdMedia";
 import {rippletInit} from './ripplet';
 import './nav-scroll';
-import lightbox from "lightbox2";
 import 'bootstrap/js/dist/collapse';
 import 'bootstrap/js/dist/dropdown';
 import 'bootstrap/js/dist/modal';
@@ -24,7 +23,7 @@ window.Cookies = Cookies;
 window.rippletInit = rippletInit;
 window.bsCustomFileInput = bsCustomFileInput;
 window.addBackToTop = addBackToTop;
-window.lightbox = lightbox;
+
 
 import './home';
 

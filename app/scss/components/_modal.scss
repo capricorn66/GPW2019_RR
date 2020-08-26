@@ -22,6 +22,11 @@
       padding: 2rem 3rem 3rem;
     }
   }
+  .modal-footer {
+    @include media-breakpoint-up(lg) {
+      padding: 0.75rem 3rem;
+    }
+  }
 }
 
 .modal-search {
@@ -83,7 +88,7 @@
       }
 
       @include media-breakpoint-up(xxl) {
-        margin: 5vh 0;
+        margin: 2vh 0;
       }
 
       @media (max-height: 800px) and (min-width: 1200px) {
@@ -97,7 +102,6 @@
       @media (max-height: 600px) and (min-width: 1200px) {
         margin: 10px 0;
       }
-
 
       .brand {
         display: block;

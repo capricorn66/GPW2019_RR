@@ -7,10 +7,10 @@
   -ms-flex-align: center;
   align-items: center;
   border-radius: 18px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 0 24px 2px;
   min-width: 128px;
   justify-content: center;
+  min-height: 40px;
 }
 
 .btn-lg {
@@ -111,13 +111,11 @@
   &:not(:disabled):not(.disabled).active,
   &:hover,
   &:focus {
-    background-color: darken($app-color-3, 9%);
-    border-color: darken($app-color-3, 9%);
+    background-color: darken($app-color-2, 9%);
+    border-color: darken($app-color-2, 9%);
     box-shadow: none !important;
   }
 }
-
-
 
 .btn-bounce-h:hover i {
   animation: bounce-h 1.4s infinite;

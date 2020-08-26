@@ -113,6 +113,10 @@
 
   .py-president {
 
+    .col-vr::after {
+      background-color: $app-color-1 !important;
+    }
+
     p {
       margin-bottom: 0;
     }
@@ -302,6 +306,11 @@
   }
 
   .section-targets {
+
+    .col-vr::after {
+      background-color: $white;
+    }
+
     .nav {
       .nav-link {
 
@@ -367,15 +376,15 @@
     .tab-content {
 
       @include media-breakpoint-up(xl) {
-        height: 300px;
+        height: 330px;
       }
 
       @media (max-height: 800px) and (min-width: 1200px) {
-        height: 260px;
+        height: 330px;
       }
 
       @media (max-height: 700px) and (min-width: 1200px) {
-        height: 260px;
+        height: auto;
       }
 
       @include media-breakpoint-up(xxl) {
@@ -383,13 +392,60 @@
       }
 
       @media (max-height: 800px) and (min-width: 1540px) {
-        height: 260px;
+        height: 360px;
       }
 
       @media (max-height: 700px) and (min-width: 1540px) {
-        height: 260px;
+        height: auto;
       }
 
+    }
+
+    .target-legend,
+    .target-box-list {
+      padding: 0 0 10px 30px;
+      margin: 0;
+      list-style: none;
+      li {
+        &::before {
+          content: "\2022";
+          color: $app-color-1;
+          font-weight: bold;
+          display: inline-block;
+          width: 25px;
+          margin-left: -25px;
+          font-size: 30px;
+          line-height: 0;
+          top: 4px;
+          position: relative;
+        }
+        padding: 5px 15px 5px 10px;
+        position: relative;
+        color: $gray-600;
+        font-size: 12px;
+        &.br-green::before {
+          color: $app-color-4;
+        }
+        &.br-red::before {
+          color: $app-color-5;
+        }
+        &.br-gray::before {
+          color: $app-color-6;
+        }
+      }
+    }
+
+    .target-legend {
+      border: 1px solid $gray-200;
+      padding: 10px;
+      display: -ms-flexbox;
+      display: flex;
+      li {
+        margin-left: 20px;
+        &::before {
+          top: 6px;
+        }
+      }
     }
 
     .target-box {
@@ -434,11 +490,24 @@
         padding: 10px;
       }
 
-
       display: -ms-flexbox;
       display: flex;
       -ms-flex-direction: column;
       flex-direction: column;
+
+      .target-legend {
+
+      }
+
+      .target-box-head {
+        font-size: 19px;
+        font-weight: 300;
+        color: #FFF;
+        margin: 0 0 10px 0;
+        padding: 10px 15px;
+        background-color: $app-color-2;
+        line-height: 1.3em;
+      }
 
       .target-box-body {
         background-color: $white;
@@ -446,6 +515,7 @@
         background-position: -1000% -1000%;
         background-repeat: inherit;
         flex: 1 1 auto;
+
 
         @include media-breakpoint-only(xs) {
           padding: 30px 10px 10px;

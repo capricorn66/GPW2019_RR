@@ -22,7 +22,7 @@
 <body class="home-page">
 
     <header>
-        <div class="container">
+        <div class="container-fluid">
             <nav class="navbar align-items-center">
 
                 <a class="brand" href="#">
@@ -93,27 +93,32 @@
                                 <hr>
                             </div>
                             <div class="col-lg-6 col-xxl-5 d-flex align-items-center">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor ligula diam, sed eleifend nulla euismod sed. Suspendisse blandit, metus a scelerisque dictum, neque ipsum fringilla nulla, eu placerat felis tellus vitae ipsum. Nulla magna ex, malesuada sed eleifend ut, efficitur dapibus tortor. Donec nec malesuada ante.</p>
+                                <div class="d-flex align-items-end">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor ligula diam, sed eleifend nulla euismod sed. Suspendisse blandit, metus a scelerisque dictum, neque ipsum fringilla nulla,</p>
+                                    <button type="button" class="btn btn-outline-primary ml-30" data-toggle="modal" data-target="#PresidentModal">
+                                        więcej
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="container anim-1 flex-grow-1 d-flex flex-column justify-content-center py-20" data-anim="true">
 
-                    <ul class="nav justify-content-center mb-30 row" id="targetsTab" role="tablist">
-                        <li class="nav-item col-md-4" role="presentation">
+                    <ul class="nav justify-content-center mb-15 row" id="targetsTab" role="tablist">
+                        <li class="nav-item col-md-4 pb-15" role="presentation">
                             <a class="nav-link text-center" id="tab_1_tab" data-toggle="tab" href="#tab_1" role="tab" aria-controls="tab_1" aria-selected="false">
                                 Aktualizacja strategii<br>
                                 #GPW2022
                             </a>
                         </li>
-                        <li class="nav-item col-md-4" role="presentation">
+                        <li class="nav-item col-md-4 pb-15" role="presentation">
                             <a class="nav-link text-center active" id="tab_2_tab" data-toggle="tab" href="#tab_2" role="tab" aria-controls="tab_2" aria-selected="true">
                                 Cele finansowe<br>
                                 Grupy Kapitałowej GPW na 2022
                             </a>
                         </li>
-                        <li class="nav-item col-md-4" role="presentation">
+                        <li class="nav-item col-md-4 pb-15" role="presentation">
                             <a class="nav-link text-center" id="tab_3_tab" data-toggle="tab" href="#tab_3" role="tab" aria-controls="tab_3" aria-selected="false">
                                 Rola rynków kapitałowych<br>
                                 i towarowych
@@ -121,14 +126,89 @@
                         </li>
                     </ul>
                     <div class="tab-content" id="targetsTabContent">
-                        <div class="tab-pane fade" id="tab_1" role="tabpanel" aria-labelledby="tab_1_tab">...</div>
+                        <div class="tab-pane fade" id="tab_1" role="tabpanel" aria-labelledby="tab_1_tab">
+
+                            <div class="app-bg-color-1 white text-center">
+                                <h2 class="py-10 font-weight-light">GK GPW</h2>
+                            </div>
+                            <div class="row no-gutters bg-gray-100">
+                                <div class="col-sm-6 col-lg-4 col-xl-2">
+                                    <div class="target-box p-0">
+                                        <div class="target-box-head">Ryenk<br> akcji</div>
+                                        <ul class="target-box-list">
+                                            <li>Pożyczki Papierów Wartościowych</li>
+                                            <li>Platforma Transakcyjna</li>
+                                            <li>GPW Growth</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-vr"></div>
+                                <div class="col-sm-6 col-lg-4 col-xl-2">
+                                    <div class="target-box p-0">
+                                        <div class="target-box-head">Ryenk<br> długu</div>
+                                        <ul class="target-box-list">
+                                            <li class="br-red">Rozwój Rynku BondSpot</li>
+                                            <li class="br-gray">Polska Agencja Ratingowa (PAR)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-vr"></div>
+                                <div class="col-sm-6 col-lg-4 col-xl-2">
+                                    <div class="target-box p-0">
+                                        <div class="target-box-head">Ryenk<br> pochodnych</div>
+                                        <ul class="target-box-list">
+                                            <li>Rozwój Instrumentów Pochodnych</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-vr"></div>
+                                <div class="col-sm-6 col-lg-4 col-xl-2">
+                                    <div class="target-box p-0">
+                                        <div class="target-box-head">Ryenk<br> towarowy</div>
+                                        <ul class="target-box-list">
+                                            <li class="br-green">Zorganizowana platforma obrotu (OTF)</li>
+                                            <li>Platforma handlu surowcami wtórnymi</li>
+                                            <li class="br-green">Rynek towarów rolnych</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-vr"></div>
+                                <div class="col-sm-6 col-lg-4 col-xl-2">
+                                    <div class="target-box p-0">
+                                        <div class="target-box-head">Produkty<br> informacyjne</div>
+                                        <ul class="target-box-list">
+                                            <li>GPW Data</li>
+                                            <li>GPW TCA TOOL</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-vr"></div>
+                                <div class="col-sm-6 col-lg-4 col-xl-2">
+                                    <div class="target-box p-0">
+                                        <div class="target-box-head">Nowe obszary<br> biznesowe</div>
+                                        <ul class="target-box-list">
+                                            <li>GPW Private Market</li>
+                                            <li>GPW Ventures</li>
+                                            <li>GPW Tech</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="target-legend">
+                               <li>GPW</li>
+                               <li class="br-green">TGE</li>
+                               <li class="br-red">BondSpot</li>
+                               <li class="br-gray">PAR</li>
+                            </ul>
+
+                        </div>
                         <div class="tab-pane fade show active" id="tab_2" role="tabpanel" aria-labelledby="tab_2_tab">
                             <div class="row">
                                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl">
                                     <div class="target-box" style="background-image: url('images/home-targets-2-bg-1.jpg')">
                                         <div class="target-box-body">
                                             <div class="target-box-val">
-                                                <strong>470</strong>
+                                                <strong id="value_1">0</strong>
                                             </div>
                                             <div class="target-box-desc">mln zł w 2022 r.</div>
                                         </div>
@@ -141,7 +221,7 @@
                                     <div class="target-box" style="background-image: url('images/home-targets-2-bg-2.jpg')">
                                         <div class="target-box-body">
                                             <div class="target-box-val">
-                                                <strong>250</strong>
+                                                <strong id="value_2">0</strong>
                                             </div>
                                             <div class="target-box-desc">mln zł w 2022 r.</div>
                                         </div>
@@ -154,7 +234,7 @@
                                     <div class="target-box" style="background-image: url('images/home-targets-2-bg-3.jpg')">
                                         <div class="target-box-body">
                                             <div class="target-box-val">
-                                                <strong>19</strong>
+                                                <strong id="value_3">0</strong>
                                             </div>
                                             <div class="target-box-desc">docelowo w 2022 r.</div>
                                         </div>
@@ -167,7 +247,7 @@
                                     <div class="target-box" style="background-image: url('images/home-targets-2-bg-4.jpg')">
                                         <div class="target-box-body">
                                             <div class="target-box-val" data-prefix="Poniżej">
-                                                <strong>50</strong>
+                                                <strong id="value_4">0</strong>
                                                 <button type="button" data-toggle="tooltip" data-placement="top" class="btn-tip" title="Zakłada się, że przejściowo może osiągnąć wartość w przedziale 63-55% ze względu na wydatki związane z realizacją strategii">
                                                     <img src="images/info.svg" alt="info">
                                                 </button>
@@ -184,7 +264,7 @@
                                     <div class="target-box" style="background-image: url('images/home-targets-2-bg-5.jpg')">
                                         <div class="target-box-body">
                                             <div class="target-box-val" data-prefix="Nie mniej niż">
-                                                <strong>60</strong>
+                                                <strong id="value_5">0</strong>
                                                 <small>%</small>
                                             </div>
                                             <div class="target-box-desc">dywidenda z zysku za 2019 r. nie mniej niż 2,4 zł na akcję</div>
@@ -196,7 +276,64 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="tab_3" role="tabpanel" aria-labelledby="tab_3_tab">...</div>
+                        <div class="tab-pane fade" id="tab_3" role="tabpanel" aria-labelledby="tab_3_tab">
+                            <div class="row no-gutters">
+                                <div class="col-lg-4 col-xxl-3 app-bg-color-2 white">
+                                    <div class="p-30">
+                                        <h2 class="font-weight-light mb-20">Kim Jesteśmy</h2>
+                                        <p class="font-12">Grupa Kapitałowa GPW (GK GPW) prowadzi platformy obrotu akcjami, obligacjami skarbowymi i korporacyjnymi, instrumentami pochodnymi, energią elektryczną i gazem ziemnym oraz określa stopy referencyjne WIBOR i WIBID.</p>
+                                        <p class="font-12">W 2018 r. Agencja indeksowa FTSE Russell zakwalifikowała polski rynek kapitałowy do grona rynków rozwiniętych.</p>
+                                        <p class="font-12">Prowadzone przez GK GPW rynki są największymi w Europie Środkowej i Wschodniej.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 col-xxl-9 bg-gray-100 d-flex align-items-center">
+                                    <div class="p-30 w-100">
+                                        <div class="row text-center no-gutters bg-white">
+                                            <div class="col-md-4 d-flex flex-column">
+                                                <div class="app-bg-color-1 white mb-10">
+                                                    <h5 class="py-10 font-weight-light">Spółki notowane</h5>
+                                                </div>
+                                                <p class="font-12 flex-grow-1">możliwość pozyskania <br>kapitału na rozwój</p>
+                                                <i class="icon-arrow-up font-40 mb-20 d-none d-md-block"></i>
+                                            </div>
+                                            <div class="col-vr"></div>
+                                            <div class="col-md-4 d-flex flex-column">
+                                                <div class="app-bg-color-1 white mb-10">
+                                                    <h5 class="py-10 font-weight-light">Inwestorzy</h5>
+                                                </div>
+                                                <p class="font-12 flex-grow-1">atrakcyjne możliwości<br> inwestycyjne</p>
+                                                <i class="icon-arrow-up font-40 mb-20 d-none d-md-block"></i>
+                                            </div>
+                                            <div class="col-vr"></div>
+                                            <div class="col-md-4 d-flex flex-column">
+                                                <div class="app-bg-color-1 white mb-10">
+                                                    <h5 class="py-10 font-weight-light">Społeczeństwo</h5>
+                                                </div>
+                                                <p class="font-12 flex-grow-1">wpływ na rozwój polskiej gospodarki<br> i edukacji finansowej społeczeństwa</p>
+                                                <i class="icon-arrow-up font-40 mb-20"></i>
+                                            </div>
+                                        </div>
+                                        <div class="app-bg-color-1 text-center white">
+                                            <h4 class="py-10 font-weight-light">GK GPW</h4>
+                                        </div>
+                                        <div class="row text-center no-gutters bg-white">
+                                            <div class="col-lg-3 pt-15">
+                                                <p class="font-12">niezawodność<br> systemów</p>
+                                            </div>
+                                            <div class="col-lg-3 pt-15">
+                                                <p class="font-12">regulacje EU i krajowe<br> pod nadzorem KNF</p>
+                                            </div>
+                                            <div class="col-lg-3 pt-15">
+                                                <p class="font-12">atrakcyjna oferta<br> produktowa</p>
+                                            </div>
+                                            <div class="col-lg-3 pt-15">
+                                                <p class="font-12">szeroka baza<br> inwestorów</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -224,7 +361,12 @@
                                 <hr>
                             </div>
                             <div class="col-lg-6 col-xxl-5 d-flex align-items-center">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor ligula diam, sed eleifend nulla euismod sed. Suspendisse blandit, metus a scelerisque dictum, neque ipsum fringilla nulla, eu placerat felis tellus vitae ipsum. Nulla magna ex, malesuada sed eleifend ut, efficitur dapibus tortor. Donec nec malesuada ante.</p>
+                                <div class="d-flex align-items-end">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor ligula diam, sed eleifend nulla euismod sed. Suspendisse blandit, metus a scelerisque dictum, neque ipsum fringilla nulla,</p>
+                                    <button type="button" class="btn btn-outline-primary ml-30" data-toggle="modal" data-target="#PresidentModal">
+                                        więcej
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -233,7 +375,7 @@
                     <div class="container anim-1" data-anim="true">
                         <h2 class="h5 ml-xl-n30">Najważniejsze wydarzenia 2019</h2>
                         <div class="row gutter-lg">
-                            <div class="col-sm-6 col-lg-3 py-box bg-white d-flex flex-column">
+                            <div class="col-sm-6 col-lg-3 py-box bg-white d-flex flex-column minh-50vh">
                                 <div class="font-18">
                                     <a href="" class="d-block app-color-1 mb-20"><strong>Rynek finansowy</strong></a>
                                     <a href="" class="d-block black mb-20"><strong>Rynek towarowy</strong></a>
@@ -301,7 +443,12 @@
                                 <hr>
                             </div>
                             <div class="col-lg-6 col-xxl-5 d-flex align-items-center">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor ligula diam, sed eleifend nulla euismod sed. Suspendisse blandit, metus a scelerisque dictum, neque ipsum fringilla nulla, eu placerat felis tellus vitae ipsum. Nulla magna ex, malesuada sed eleifend ut, efficitur dapibus tortor. Donec nec malesuada ante.</p>
+                                <div class="d-flex align-items-end">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor ligula diam, sed eleifend nulla euismod sed. Suspendisse blandit, metus a scelerisque dictum, neque ipsum fringilla nulla,</p>
+                                    <button type="button" class="btn btn-outline-primary ml-30" data-toggle="modal" data-target="#PresidentModal">
+                                        więcej
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -420,21 +567,50 @@
                                         <div class="tab-content" id="nav-management-1-nav-tabContent">
                                             <div class="tab-pane fade show active" id="nav-management-1-1" role="tabpanel" aria-labelledby="nav-management-1-1-tab">
                                                 <div class="section-management-text">
-                                                    <h4>List Prezesa Zarządu</h4>
+                                                    <div class="maxh-40vh">
+                                                        <h4>List Prezesa Zarządu</h4>
 
-                                                    <p>Szanowni Państwo, Drodzy Akcjonariusze i Inwestorzy,</p>
+                                                        <p>Szanowni Państwo, Drodzy Akcjonariusze i Inwestorzy,</p>
 
-                                                    <p>Z przyjemnością prezentuję Państwu Raport Roczny GK GPW, sporządzony po raz pierwszy
-                                                        w formie zintegrowanej zgodnie z Międzynarodowymi Założeniami Koncepcyjnymi
-                                                        Sprawozdawczości Zintegrowanej (The International Integrated Reporting Framework),
-                                                        opracowanymi przez Międzynarodową Radę ds. Sprawozdawczości Zintegrowanej (the
-                                                        International Integrated Reporting Council – IIRC).</p>
-
+                                                        <p>Z przyjemnością prezentuję Państwu Raport Roczny GK GPW, sporządzony po raz pierwszy
+                                                            w formie zintegrowanej zgodnie z Międzynarodowymi Założeniami Koncepcyjnymi
+                                                            Sprawozdawczości Zintegrowanej (The International Integrated Reporting Framework),
+                                                            opracowanymi przez Międzynarodową Radę ds. Sprawozdawczości Zintegrowanej (the
+                                                            International Integrated Reporting Council – IIRC).</p>
+                                                        <p>Z przyjemnością prezentuję Państwu Raport Roczny GK GPW, sporządzony po raz pierwszy
+                                                            w formie zintegrowanej zgodnie z Międzynarodowymi Założeniami Koncepcyjnymi
+                                                            Sprawozdawczości Zintegrowanej (The International Integrated Reporting Framework),
+                                                            opracowanymi przez Międzynarodową Radę ds. Sprawozdawczości Zintegrowanej (the
+                                                            International Integrated Reporting Council – IIRC).</p>
+                                                        <p>Z przyjemnością prezentuję Państwu Raport Roczny GK GPW, sporządzony po raz pierwszy
+                                                            w formie zintegrowanej zgodnie z Międzynarodowymi Założeniami Koncepcyjnymi
+                                                            Sprawozdawczości Zintegrowanej (The International Integrated Reporting Framework),
+                                                            opracowanymi przez Międzynarodową Radę ds. Sprawozdawczości Zintegrowanej (the
+                                                            International Integrated Reporting Council – IIRC).</p>
+                                                    </div>
                                                     <a href="" class="btn btn-lg btn-outline-secondary my-20">Czytaj więcej <i class="icon-arrow-right ml-15"></i></a>
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade" id="nav-management-1-2" role="tabpanel" aria-labelledby="nav-management-1-2-tab">
-
+                                                <div class="section-management-text">
+                                                    <div class="maxh-40vh">
+                                                        <p>Z przyjemnością prezentuję Państwu Raport Roczny GK GPW, sporządzony po raz pierwszy
+                                                            w formie zintegrowanej zgodnie z Międzynarodowymi Założeniami Koncepcyjnymi
+                                                            Sprawozdawczości Zintegrowanej (The International Integrated Reporting Framework),
+                                                            opracowanymi przez Międzynarodową Radę ds. Sprawozdawczości Zintegrowanej (the
+                                                            International Integrated Reporting Council – IIRC).</p>
+                                                        <p>Z przyjemnością prezentuję Państwu Raport Roczny GK GPW, sporządzony po raz pierwszy
+                                                            w formie zintegrowanej zgodnie z Międzynarodowymi Założeniami Koncepcyjnymi
+                                                            Sprawozdawczości Zintegrowanej (The International Integrated Reporting Framework),
+                                                            opracowanymi przez Międzynarodową Radę ds. Sprawozdawczości Zintegrowanej (the
+                                                            International Integrated Reporting Council – IIRC).</p>
+                                                        <p>Z przyjemnością prezentuję Państwu Raport Roczny GK GPW, sporządzony po raz pierwszy
+                                                            w formie zintegrowanej zgodnie z Międzynarodowymi Założeniami Koncepcyjnymi
+                                                            Sprawozdawczości Zintegrowanej (The International Integrated Reporting Framework),
+                                                            opracowanymi przez Międzynarodową Radę ds. Sprawozdawczości Zintegrowanej (the
+                                                            International Integrated Reporting Council – IIRC).</p>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
 
@@ -501,7 +677,12 @@
                                 <hr>
                             </div>
                             <div class="col-lg-6 col-xxl-5 d-flex align-items-center">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor ligula diam, sed eleifend nulla euismod sed. Suspendisse blandit, metus a scelerisque dictum, neque ipsum fringilla nulla, eu placerat felis tellus vitae ipsum. Nulla magna ex, malesuada sed eleifend ut, efficitur dapibus tortor. Donec nec malesuada ante.</p>
+                                <div class="d-flex align-items-end">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor ligula diam, sed eleifend nulla euismod sed. Suspendisse blandit, metus a scelerisque dictum, neque ipsum fringilla nulla,</p>
+                                    <button type="button" class="btn btn-outline-primary ml-30" data-toggle="modal" data-target="#PresidentModal">
+                                        więcej
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -573,7 +754,12 @@
                                 <hr>
                             </div>
                             <div class="col-lg-6 col-xxl-5 d-flex align-items-center">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor ligula diam, sed eleifend nulla euismod sed. Suspendisse blandit, metus a scelerisque dictum, neque ipsum fringilla nulla, eu placerat felis tellus vitae ipsum. Nulla magna ex, malesuada sed eleifend ut, efficitur dapibus tortor. Donec nec malesuada ante.</p>
+                                <div class="d-flex align-items-end">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor ligula diam, sed eleifend nulla euismod sed. Suspendisse blandit, metus a scelerisque dictum, neque ipsum fringilla nulla,</p>
+                                    <button type="button" class="btn btn-outline-primary ml-30" data-toggle="modal" data-target="#PresidentModal">
+                                        więcej
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -586,7 +772,7 @@
                                     <div class="box-header">
                                         <h2>Odpowiedzialna Giełda</h2>
                                     </div>
-                                    <div class="box-body">
+                                    <div class="box-body minh-50vh">
                                         <div class="row gutter-lg justify-content-center">
                                             <div class="col-lg-5 pb-40">
                                                 <div class="px-15">
@@ -887,6 +1073,39 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal President -->
+    <div class="modal fade" id="PresidentModal" tabindex="-1" aria-labelledby="PresidentModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex mb-30">
+                        <div class="mr-20">
+                            <img src="images/president-1-sm.jpg" alt="Marek Dietl">
+                        </div>
+                        <div>
+                            <h5 class="modal-title" id="PresidentModalLabel">Marek Dietl</h5>
+                            <p class="lead">Prezes Zarządu<br> Giełdy Papierów Wartościowych<br> w Warszawie</p>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor ligula diam, sed eleifend nulla euismod sed. Suspendisse blandit, metus a scelerisque dictum, neque ipsum fringilla nulla,</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor ligula diam, sed eleifend nulla euismod sed. Suspendisse blandit, metus a scelerisque dictum, neque ipsum fringilla nulla,</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor ligula diam, sed eleifend nulla euismod sed. Suspendisse blandit, metus a scelerisque dictum, neque ipsum fringilla nulla,</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
                 </div>
             </div>
         </div>

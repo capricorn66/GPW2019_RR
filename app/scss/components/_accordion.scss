@@ -4,6 +4,9 @@
 .accordion {
   border-bottom: 1px solid $gray-200;
   margin-bottom: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
   .btn-accordion {
     span {
       &:first-child {
@@ -25,8 +28,11 @@
     }
   }
 
+  .card-header,
   .btn-accordion {
     display: block;
+    background: none;
+    border: 0;
     width: 100%;
     font-weight: 400;
     padding: 10px 0 10px 44px;
@@ -63,8 +69,10 @@
       color: $app-color-1;
     }
   }
-  .accordion-item {
 
+  .card,
+  .accordion-item {
+    border: 0;
     &::after {
       content: "";
       height: 1px;

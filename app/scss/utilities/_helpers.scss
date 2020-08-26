@@ -189,6 +189,7 @@
     flex: 0 0 0;
     position: relative;
     padding: 0 !important;
+    z-index: 1;
     &::after {
         content: "";
         position: absolute;
@@ -197,4 +198,13 @@
         width: 1px;
         background-color: $app-color-1;
     }
+}
+
+.minh-50vh {
+    min-height: 50vh;
+}
+
+.maxh-40vh {
+    max-height: 40vh;
+    overflow: hidden;
 }
