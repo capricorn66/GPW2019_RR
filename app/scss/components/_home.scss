@@ -1297,6 +1297,7 @@
       .tab-pane {
         -ms-flex-positive: 1;
         flex-grow: 1;
+        &.active,
         &.show {
           display: -ms-flexbox;
           display: flex;
@@ -1445,55 +1446,9 @@
         }
       }
       p {
-        @include media-breakpoint-only(xs) {
-          margin-bottom: 1.6em;
-          font-size: 13px;
-        }
 
-        @include media-breakpoint-between(sm,lg) {
-          margin-bottom: 1.6em;
-          font-size: 13px;
-        }
-
-        @include media-breakpoint-up(xl) {
-          margin-bottom: 2em;
-          font-size: 16px;
-        }
-
-        @media (max-height: 900px) and (min-width: 1540px) {
-          margin-bottom: 1.6em;
-          font-size: 14px;
-        }
-
-        @media (max-height: 800px) and (min-width: 1200px) {
-          margin-bottom: 1.4em;
-          font-size: 13px;
-        }
-
-        @media (max-height: 700px) and (min-width: 1200px) {
-          margin-bottom: 1.2em;
-          font-size: 13px;
-        }
-
-        @include media-breakpoint-up(xxl) {
-          margin-bottom: 2em;
-          font-size: 16px;
-        }
-
-        @media (max-height: 900px) and (min-width: 1540px) {
-          margin-bottom: 1.6em;
-          font-size: 14px;
-        }
-
-        @media (max-height: 800px) and (min-width: 1540px) {
-          margin-bottom: 1.4em;
-          font-size: 13px;
-        }
-
-        @media (max-height: 700px) and (min-width: 1540px) {
-          margin-bottom: 1.2em;
-          font-size: 13px;
-        }
+        margin-bottom: 1.3em;
+        font-size: 12px;
 
       }
       .nav {
