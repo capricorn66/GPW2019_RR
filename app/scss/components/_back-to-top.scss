@@ -7,6 +7,12 @@
   box-shadow: none;
   text-align: center;
   line-height: 50px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   &::after {
     content: "\e903";
     /* use !important to prevent issues with browser extensions that change fonts */

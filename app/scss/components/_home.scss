@@ -118,6 +118,12 @@
 
 #fullpage.fullpage-wrapper:not(.fp-destroyed) section {
   padding-top: 100px;
+
+  .maxh-40vh {
+    max-height: 40vh;
+    overflow: hidden;
+  }
+
 }
 
 #fullpage {
@@ -906,8 +912,8 @@
           font-size: 20px;
         }
         .py-box {
-          padding-top: 30px;
-          padding-bottom: 30px;
+          padding-top: 20px;
+          padding-bottom: 20px;
         }
       }
 
@@ -963,8 +969,8 @@
           font-size: 24px;
         }
         .py-box {
-          padding-top: 50px;
-          padding-bottom: 50px;
+          padding-top: 20px;
+          padding-bottom: 20px;
         }
       }
 
@@ -982,8 +988,8 @@
           font-size: 20px;
         }
         .py-box {
-          padding-top: 30px;
-          padding-bottom: 30px;
+          padding-top: 20px;
+          padding-bottom: 20px;
         }
       }
 
@@ -1446,9 +1452,46 @@
         }
       }
       p {
+        @include media-breakpoint-only(xs) {
+          margin-bottom: 1.6em;
+          font-size: 13px;
+        }
 
-        margin-bottom: 1.3em;
-        font-size: 12px;
+        @include media-breakpoint-between(sm,lg) {
+          margin-bottom: 1.6em;
+          font-size: 13px;
+        }
+
+        @include media-breakpoint-up(xl) {
+          margin-bottom: 2em;
+          font-size: 13px;
+        }
+
+        @media (max-height: 900px) and (min-width: 1540px) {
+          margin-bottom: 1.6em;
+          font-size: 12px;
+        }
+
+        @media (max-height: 800px) and (min-width: 1200px) {
+          margin-bottom: 1.4em;
+          font-size: 12px;
+        }
+
+        @media (max-height: 700px) and (min-width: 1200px) {
+          margin-bottom: 1.2em;
+          font-size: 11px;
+        }
+
+        @include media-breakpoint-up(xxl) {
+          margin-bottom: 2em;
+          font-size: 13px;
+        }
+
+        @media (max-height: 900px) and (min-width: 1540px) {
+          margin-bottom: 1.2em;
+          font-size: 12px;
+        }
+
 
       }
       .nav {

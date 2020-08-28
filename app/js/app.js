@@ -53,9 +53,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
 function handleHeader() {
     if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-        document.body.className = "sm";
+        document.body.classList.add('sm');
     } else {
-        document.body.className = "";
+        document.body.classList.remove('sm');
     }
 }
 

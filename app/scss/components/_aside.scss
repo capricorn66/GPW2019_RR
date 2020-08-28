@@ -71,7 +71,7 @@
         }
       }
 
-      &:hover .tip {
+      &:not([aria-expanded="true"]):hover .tip {
         opacity: 1;
         margin-right: 10px;
         visibility: visible;
@@ -133,15 +133,18 @@
           color: #FFF;
           -webkit-transition: all 0.2s ease-out;
           transition: all 0.2s ease-out;
+          -ms-flex-align: center;
+          align-items: center;
           @include media-breakpoint-up(lg) {
-            display: inline-block;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
             min-height: 64px;
-            line-height: 48px;
             text-align: left;
             padding: 5px 15px;
           }
           @include media-breakpoint-down(md) {
-            display: block;
+            display: -ms-flexbox;
+            display: flex;
             text-align: center;
             padding: 10px 12px;
           }
