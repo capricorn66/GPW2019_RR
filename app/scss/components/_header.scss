@@ -104,3 +104,50 @@ header {
         }
     }
 }
+
+.darkTheme {
+    header {
+        background-color: darken($gray-900, 5%);
+
+        body.sm & {
+            box-shadow: 0 0 10px 0 rgba($lightblack, 0);
+        }
+
+        .navbar {
+            .nav-tools {
+                .nav-link {
+                    &.nav-link-lang {
+                        background-color: $dark-color-1;
+                        color: $gray-900;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    header {
+        background-color: darken($gray-900, 7%);
+
+        body.sm & {
+            box-shadow: 0 0 10px 0 rgba($lightblack, 0);
+        }
+
+        .navbar {
+            .nav-tools {
+                .nav-link {
+                    &.nav-link-lang {
+                        background-color: $dark-color-1;
+                        color: $gray-900;
+                    }
+                }
+
+                .nav-item:nth-child(3) {
+                    display: none;
+                }
+
+            }
+        }
+    }
+}

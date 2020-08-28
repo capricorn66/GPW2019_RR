@@ -22,3 +22,27 @@
     color: $app-color-1;
   }
 }
+
+.darkTheme {
+
+  .cookies {
+    background: $gray-700;
+    border-top: 2px solid $gray-700;
+    i {
+      color: $dark-color-1;
+    }
+  }
+
+}
+
+@media screen and (prefers-color-scheme: dark) {
+
+  .cookies {
+    background: $gray-700;
+    border-top: 2px solid $gray-700;
+    i {
+      color: $dark-color-1;
+    }
+  }
+
+}

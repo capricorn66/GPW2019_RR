@@ -244,19 +244,19 @@
       }
 
       @include media-breakpoint-up(xl) {
-        margin-bottom: 75px;
+        margin-bottom: 55px;
       }
 
       @include media-breakpoint-up(xxl) {
-        margin-bottom: 80px;
+        margin-bottom: 60px;
       }
 
       @media (max-height: 800px) and (min-width: 1200px) {
-        margin-bottom: 70px;
+        margin-bottom: 55px;
       }
 
       @media (max-height: 700px) and (min-width: 1200px) {
-        margin-bottom: 60px;
+        margin-bottom: 50px;
       }
 
       @media (max-height: 600px) and (min-width: 1200px) {
@@ -278,11 +278,11 @@
         }
 
         @include media-breakpoint-up(xl) {
-          font-size: 25px;
+          font-size: 24px;
         }
 
         @include media-breakpoint-up(xxl) {
-          font-size: 26px;
+          font-size: 24px;
         }
 
         @media (max-height: 800px) and (min-width: 1200px) {
@@ -306,34 +306,7 @@
           margin-bottom: 4px;
           .nav-item {
             color: $white;
-
-            @include media-breakpoint-only(xs) {
-              font-size: 16px;
-            }
-
-            @include media-breakpoint-between(sm,lg) {
-              font-size: 16px;
-            }
-
-            @include media-breakpoint-up(xl) {
-              font-size: 17px;
-            }
-
-            @include media-breakpoint-up(xxl) {
-              font-size: 18px;
-            }
-
-            @media (max-height: 800px) and (min-width: 1200px) {
-              font-size: 18px;
-            }
-
-            @media (max-height: 700px) and (min-width: 1200px) {
-              font-size: 16px;
-            }
-
-            @media (max-height: 600px) and (min-width: 1200px) {
-              font-size: 16px;
-            }
+            font-size: 16px;
           }
         }
       }

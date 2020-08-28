@@ -65,5 +65,86 @@ main {
       font-weight: 600;
     }
   }
+}
+
+.darkTheme {
+
+  main {
+    .nav-pills {
+      border-bottom: 1px solid $dark-color-1;
+      &.gpw-tabs {
+        .nav-item {
+          .nav-link {
+            background: $gray-700;
+            color: $gray-300;
+            &:hover {
+              background: $dark-color-1;
+              color: $gray-900;
+            }
+          }
+        }
+      }
+      .nav-item {
+        .nav-link {
+          border: 1px solid $dark-color-1;
+          color: $gray-900;
+          &.active {
+            background: $dark-color-1;
+            color: $gray-900;
+          }
+        }
+      }
+    }
+
+    .filter-item {
+      color: rgba($gray-300,.7);
+      &:focus,
+      &:hover,
+      &.active {
+        color: $dark-color-1;
+      }
+    }
+  }
+
+}
+
+@media screen and (prefers-color-scheme: dark) {
+
+  main {
+    .nav-pills {
+      border-bottom: 1px solid $dark-color-1;
+      &.gpw-tabs {
+        .nav-item {
+          .nav-link {
+            background: $gray-700;
+            color: $gray-300;
+            &:hover {
+              background: $dark-color-1;
+              color: $gray-900;
+            }
+          }
+        }
+      }
+      .nav-item {
+        .nav-link {
+          border: 1px solid $dark-color-1;
+          color: $gray-900;
+          &.active {
+            background: $dark-color-1;
+            color: $gray-900;
+          }
+        }
+      }
+    }
+
+    .filter-item {
+      color: rgba($gray-300,.7);
+      &:focus,
+      &:hover,
+      &.active {
+        color: $dark-color-1;
+      }
+    }
+  }
 
 }

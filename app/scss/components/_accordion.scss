@@ -91,3 +91,57 @@
   }
 
 }
+
+.darkTheme {
+
+  .accordion {
+    border-bottom: 1px solid $gray-600;
+
+    .card-header,
+    .btn-accordion {
+      color: $dark-body-color;
+      &::after {
+        color: $dark-color-1;
+      }
+      &:focus,
+      &:hover {
+        color: $dark-color-1;
+      }
+    }
+
+    .card,
+    .accordion-item {
+      &::after {
+        background: $dark-color-1;
+      }
+    }
+  }
+
+}
+
+@media screen and (prefers-color-scheme: dark) {
+
+  .accordion {
+    border-bottom: 1px solid $gray-600;
+
+    .card-header,
+    .btn-accordion {
+      color: $dark-body-color;
+      &::after {
+        color: $dark-color-1;
+      }
+      &:focus,
+      &:hover {
+        color: $dark-color-1;
+      }
+    }
+
+    .card,
+    .accordion-item {
+      &::after {
+        background: $dark-color-1;
+      }
+    }
+  }
+
+}

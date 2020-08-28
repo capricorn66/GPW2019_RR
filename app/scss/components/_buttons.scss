@@ -120,3 +120,145 @@
 .btn-bounce-h:hover i {
   animation: bounce-h 1.4s infinite;
 }
+
+
+
+.darkTheme {
+
+  .btn-link {
+    color: $dark-color-1;
+  }
+
+  .btn-white {
+    background-color: $gray-900;
+    border-color: $gray-900;
+    color: $dark-color-1;
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    &:hover,
+    &:focus {
+      color: $gray-900;
+    }
+  }
+
+  .btn-primary {
+    background-color: $dark-color-1;
+    border-color: $dark-color-1;
+    color: $gray-900 !important;
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    &:hover,
+    &:focus {
+      background-color: lighten($dark-color-1, 12%);
+      border-color: lighten($dark-color-1, 12%);
+    }
+  }
+
+  .btn-secondary {
+    background-color: $dark-color-2;
+    border-color: $dark-color-2;
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    &:hover,
+    &:focus {
+      background-color: darken($dark-color-2, 9%);
+      border-color: darken($dark-color-2, 9%);
+    }
+  }
+
+  .btn-outline-primary {
+    border-color: $dark-color-1;
+    color: $dark-color-1;
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    &:hover,
+    &:focus {
+      background-color: lighten($dark-color-1, 12%);
+      border-color: lighten($dark-color-1, 12%);
+    }
+  }
+
+  .btn-outline-secondary {
+    border-color: $app-color-3;
+    color: $app-color-3;
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    &:hover,
+    &:focus {
+      background-color: darken($dark-color-2, 9%);
+      border-color: darken($dark-color-2, 9%);
+    }
+  }
+
+}
+
+@media screen and (prefers-color-scheme: dark) {
+
+  .btn-link {
+    color: $dark-color-1;
+  }
+
+  .btn-white {
+    background-color: $gray-900;
+    border-color: $gray-900;
+    color: $dark-color-1;
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    &:hover,
+    &:focus {
+      color: $gray-900;
+    }
+  }
+
+  .btn-primary {
+    background-color: $dark-color-1;
+    border-color: $dark-color-1;
+    color: $gray-900 !important;
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    &:hover,
+    &:focus {
+      background-color: lighten($dark-color-1, 12%);
+      border-color: lighten($dark-color-1, 12%);
+    }
+  }
+
+  .btn-secondary {
+    background-color: $dark-color-2;
+    border-color: $dark-color-2;
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    &:hover,
+    &:focus {
+      background-color: darken($dark-color-2, 9%);
+      border-color: darken($dark-color-2, 9%);
+    }
+  }
+
+  .btn-outline-primary {
+    border-color: $dark-color-1;
+    color: $dark-color-1;
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    &:hover,
+    &:focus {
+      background-color: lighten($dark-color-1, 12%);
+      border-color: lighten($dark-color-1, 12%);
+    }
+  }
+
+  .btn-outline-secondary {
+    border-color: $app-color-3;
+    color: $app-color-3;
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    &:hover,
+    &:focus {
+      background-color: darken($dark-color-2, 9%);
+      border-color: darken($dark-color-2, 9%);
+    }
+  }
+
+}

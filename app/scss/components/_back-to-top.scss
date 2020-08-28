@@ -29,3 +29,23 @@
     font-size: 34px;
   }
 }
+
+.darkTheme {
+  #back-to-top {
+    background-color: $dark-color-1;
+    border: 2px solid $gray-900;
+    &::after {
+      color: $gray-900;
+    }
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  #back-to-top {
+    background-color: $dark-color-1;
+    border: 2px solid $gray-900;
+    &::after {
+      color: $gray-900;
+    }
+  }
+}

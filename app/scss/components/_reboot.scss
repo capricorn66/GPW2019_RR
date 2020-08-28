@@ -14,6 +14,15 @@ body {
   @include media-breakpoint-up(lg) {
     padding-top: 100px;
   }
+
+  &.darkTheme {
+    background-color: darken($gray-900, 4%);
+    color: $dark-body-color;
+  }
+  @media screen and (prefers-color-scheme: dark) {
+    background-color: darken($gray-900, 4%);
+    color: $dark-body-color;
+  }
 }
 
 a {
@@ -26,4 +35,36 @@ a {
 
 hr {
   border-top-color: $gray-200;
+}
+
+.darkTheme {
+
+  a {
+    color: $dark-color-1;
+    &:focus,
+    &:hover {
+      color: darken($dark-color-1, 10%)
+    }
+  }
+
+  hr {
+    border-top-color: $gray-400;
+  }
+
+}
+
+@media screen and (prefers-color-scheme: dark) {
+
+  a {
+    color: $dark-color-1;
+    &:focus,
+    &:hover {
+      color: darken($dark-color-1, 10%)
+    }
+  }
+
+  hr {
+    border-top-color: $gray-400;
+  }
+
 }

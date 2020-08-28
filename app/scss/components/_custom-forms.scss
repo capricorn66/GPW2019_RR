@@ -179,3 +179,145 @@
     }
   }
 }
+
+.darkTheme {
+
+  .custom-radio,
+  .custom-checkbox {
+    .custom-control-label::before,
+    .custom-control-input:checked ~ .custom-control-label::before,
+    .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+      border: 1px solid $dark-color-1;
+    }
+  }
+
+  .page-section {
+    .custom-radio,
+    .custom-checkbox {
+      .custom-control-label::before,
+      .custom-control-input:checked ~ .custom-control-label::before,
+      .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+        border: 1px solid $gray-500;
+      }
+    }
+  }
+
+  .custom-radio {
+    .custom-control-input:checked ~ .custom-control-label::after,
+    .custom-control-input:not(:disabled):active ~ .custom-control-label::after {
+      background: $dark-color-2;
+    }
+  }
+
+  .custom-checkbox {
+    .custom-control-input:checked ~ .custom-control-label::before {
+      background: $dark-color-2;
+      border-color: $dark-color-2;
+    }
+    .custom-control-input:checked ~ .custom-control-label::after {
+      color: $gray-900;
+    }
+  }
+
+  .page-section {
+    .custom-checkbox {
+      .custom-control-input:checked ~ .custom-control-label::before {
+        background: $dark-color-1;
+      }
+    }
+  }
+
+  .radio-rating {
+    .custom-control-input {
+      &:checked ~ .custom-control-label {
+        background: $dark-color-2;
+        border-color: $dark-color-2;
+        color: $gray-900;
+      }
+    }
+    .custom-control-label {
+      border: 1px solid $dark-color-1;
+      background: $gray-900;
+      color: $dark-color-1;
+    }
+  }
+
+  .custom-file-label {
+    &::after {
+      background-color: $gray-200;
+      color: $gray-900;
+    }
+  }
+
+}
+
+@media screen and (prefers-color-scheme: dark) {
+
+  .custom-radio,
+  .custom-checkbox {
+    .custom-control-label::before,
+    .custom-control-input:checked ~ .custom-control-label::before,
+    .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+      border: 1px solid $dark-color-1;
+    }
+  }
+
+  .page-section {
+    .custom-radio,
+    .custom-checkbox {
+      .custom-control-label::before,
+      .custom-control-input:checked ~ .custom-control-label::before,
+      .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+        border: 1px solid $gray-500;
+      }
+    }
+  }
+
+  .custom-radio {
+    .custom-control-input:checked ~ .custom-control-label::after,
+    .custom-control-input:not(:disabled):active ~ .custom-control-label::after {
+      background: $dark-color-2;
+    }
+  }
+
+  .custom-checkbox {
+    .custom-control-input:checked ~ .custom-control-label::before {
+      background: $dark-color-2;
+      border-color: $dark-color-2;
+    }
+    .custom-control-input:checked ~ .custom-control-label::after {
+      color: $gray-900;
+    }
+  }
+
+  .page-section {
+    .custom-checkbox {
+      .custom-control-input:checked ~ .custom-control-label::before {
+        background: $dark-color-1;
+      }
+    }
+  }
+
+  .radio-rating {
+    .custom-control-input {
+      &:checked ~ .custom-control-label {
+        background: $dark-color-2;
+        border-color: $dark-color-2;
+        color: $gray-900;
+      }
+    }
+    .custom-control-label {
+      border: 1px solid $dark-color-1;
+      background: $gray-900;
+      color: $dark-color-1;
+    }
+  }
+
+  .custom-file-label {
+    &::after {
+      background-color: $gray-200;
+      color: $gray-900;
+    }
+  }
+
+}

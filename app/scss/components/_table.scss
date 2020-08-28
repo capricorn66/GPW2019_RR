@@ -14,26 +14,51 @@
     .custom-control-input ~ .custom-control-label::before,
     .custom-control-input:checked ~ .custom-control-label::before {
       border-color: $app-color-1;
+      background: $white;
+      .darkTheme & {
+        border-color: $dark-color-1;
+        background: $gray-900;
+      }
+      @media screen and (prefers-color-scheme: dark) {
+        border-color: $dark-color-1;
+        background: $gray-900;
+      }
     }
     .custom-control-input ~ .custom-control-label::before {
       background-color: $white;
+      .darkTheme & {
+        border-color: $dark-color-1;
+        background-color: $gray-900;
+      }
+      @media screen and (prefers-color-scheme: dark) {
+        border-color: $dark-color-1;
+        background-color: $gray-900;
+      }
     }
     .custom-control-input:checked ~ .custom-control-label::before {
       background-color: $app-color-1;
+      .darkTheme & {
+        border-color: $gray-900;
+        background-color: $dark-color-1;
+      }
+      @media screen and (prefers-color-scheme: dark) {
+        border-color: $gray-900;
+        background-color: $dark-color-1;
+      }
     }
   }
 
   @media (hover: hover) and (pointer: fine) {
 
-    &.clm-1-bg-red,
-    &.clm-2-bg-red,
-    &.clm-3-bg-red,
-    &.clm-4-bg-red,
-    &.clm-5-bg-red,
-    &.clm-6-bg-red,
-    &.clm-7-bg-red,
-    &.clm-8-bg-red,
-    &.clm-9-bg-red,
+    &.clm-1-bg-color,
+    &.clm-2-bg-color,
+    &.clm-3-bg-color,
+    &.clm-4-bg-color,
+    &.clm-5-bg-color,
+    &.clm-6-bg-color,
+    &.clm-7-bg-color,
+    &.clm-8-bg-color,
+    &.clm-9-bg-color,
     &:not(.table-hoverless) {
       tr {
         &:not(.collapse-row):hover {
@@ -43,6 +68,20 @@
             a {
               color: $white;
             }
+            .darkTheme & {
+              background: $dark-color-2 !important;
+              color: $gray-900;
+              a {
+                color: $gray-900;
+              }
+            }
+            @media screen and (prefers-color-scheme: dark) {
+              background: $dark-color-2 !important;
+              color: $gray-900;
+              a {
+                color: $gray-900;
+              }
+            }
           }
         }
       }
@@ -50,15 +89,15 @@
   }
 
   @media all and (-ms-high-contrast:none) {
-    &.clm-1-bg-red,
-    &.clm-2-bg-red,
-    &.clm-3-bg-red,
-    &.clm-4-bg-red,
-    &.clm-5-bg-red,
-    &.clm-6-bg-red,
-    &.clm-7-bg-red,
-    &.clm-8-bg-red,
-    &.clm-9-bg-red,
+    &.clm-1-bg-color,
+    &.clm-2-bg-color,
+    &.clm-3-bg-color,
+    &.clm-4-bg-color,
+    &.clm-5-bg-color,
+    &.clm-6-bg-color,
+    &.clm-7-bg-color,
+    &.clm-8-bg-color,
+    &.clm-9-bg-color,
     &:not(.table-hoverless) {
       tr {
         &:not(.collapse-row):hover {
@@ -84,10 +123,18 @@
         background-color: $gray-800;
         color: $white;
       }
+      @media screen and (prefers-color-scheme: dark) {
+        background-color: $gray-800;
+        color: $white;
+      }
     }
     &:nth-child(even) td {
       background-color: $white;
       .darkTheme & {
+        background-color: $gray-900;
+        color: $white;
+      }
+      @media screen and (prefers-color-scheme: dark) {
         background-color: $gray-900;
         color: $white;
       }
@@ -102,6 +149,9 @@
         .collapse-row-body {
           background-color: $gray-100;
           .darkTheme & {
+            background-color: $gray-900;
+          }
+          @media screen and (prefers-color-scheme: dark) {
             background-color: $gray-900;
           }
           ol {
@@ -126,6 +176,10 @@
           background: $dark-color-1 !important;
           color: $black;
         }
+        @media screen and (prefers-color-scheme: dark) {
+          background: $dark-color-1 !important;
+          color: $black;
+        }
       }
     }
 
@@ -133,6 +187,9 @@
       th, td {
         background: $white !important;
         .darkTheme & {
+          background: $black !important;
+        }
+        @media screen and (prefers-color-scheme: dark) {
           background: $black !important;
         }
       }
@@ -144,6 +201,9 @@
         .darkTheme & {
           background: $gray-800 !important;
         }
+        @media screen and (prefers-color-scheme: dark) {
+          background: $gray-800 !important;
+        }
       }
     }
 
@@ -152,6 +212,10 @@
         background: $gray-400 !important;
         color: $white;
         .darkTheme & {
+          background: $gray-600 !important;
+          color: $black;
+        }
+        @media screen and (prefers-color-scheme: dark) {
           background: $gray-600 !important;
           color: $black;
         }
@@ -193,10 +257,17 @@
         background: $dark-color-1 !important;
         color: $black;
       }
+      @media screen and (prefers-color-scheme: dark) {
+        background: $dark-color-1 !important;
+        color: $black;
+      }
     }
     &.bg-white {
       background: $white;
       .darkTheme & {
+        background: $black;
+      }
+      @media screen and (prefers-color-scheme: dark) {
         background: $black;
       }
     }
@@ -205,11 +276,18 @@
       .darkTheme & {
         background: $gray-800;
       }
+      @media screen and (prefers-color-scheme: dark) {
+        background: $gray-800;
+      }
     }
     &.bg-gray {
       background: $gray-400 !important;
       color: $white;
       .darkTheme & {
+        background: $gray-600 !important;
+        color: $black;
+      }
+      @media screen and (prefers-color-scheme: dark) {
         background: $gray-600 !important;
         color: $black;
       }
@@ -233,8 +311,12 @@
     background-color: $app-color-1;
     color: $white;
     .darkTheme & {
-      background: $gray-200;
-      color: $black;
+      background: $gray-700;
+      color: $gray-100;
+    }
+    @media screen and (prefers-color-scheme: dark) {
+      background: $gray-700;
+      color: $gray-100;
     }
     font-weight: 300;
   }
@@ -316,6 +398,10 @@ P + .table-responsive {
     background: $dark-color-1 !important;
     color: $black;
   }
+  @media screen and (prefers-color-scheme: dark) {
+    background: $dark-color-1 !important;
+    color: $black;
+  }
 }
 @media (hover: hover) and (pointer: fine) {
   .clm-2-bg-color tr:not(.collapse-row):hover td:not([colspan]) + td:nth-child(2):not([colspan]),
@@ -330,6 +416,10 @@ P + .table-responsive {
   background: $app-color-1 !important;
   color: #FFF;
   .darkTheme & {
+    background: $dark-color-1 !important;
+    color: $black;
+  }
+  @media screen and (prefers-color-scheme: dark) {
     background: $dark-color-1 !important;
     color: $black;
   }
@@ -351,6 +441,10 @@ P + .table-responsive {
     background: $dark-color-1 !important;
     color: $black;
   }
+  @media screen and (prefers-color-scheme: dark) {
+    background: $dark-color-1 !important;
+    color: $black;
+  }
 }
 @media (hover: hover) and (pointer: fine) {
   .clm-4-bg-color tr:not(.collapse-row):hover td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:nth-child(4):not([colspan]),
@@ -365,6 +459,10 @@ P + .table-responsive {
   background: $app-color-1 !important;
   color: #FFF;
   .darkTheme & {
+    background: $dark-color-1 !important;
+    color: $black;
+  }
+  @media screen and (prefers-color-scheme: dark) {
     background: $dark-color-1 !important;
     color: $black;
   }
@@ -385,6 +483,10 @@ P + .table-responsive {
     background: $dark-color-1 !important;
     color: $black;
   }
+  @media screen and (prefers-color-scheme: dark) {
+    background: $dark-color-1 !important;
+    color: $black;
+  }
 }
 @media (hover: hover) and (pointer: fine) {
   .clm-6-bg-color tr:not(.collapse-row):hover td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:nth-child(6):not([colspan]),
@@ -399,6 +501,10 @@ P + .table-responsive {
   background: $app-color-1 !important;
   color: #FFF;
   .darkTheme & {
+    background: $dark-color-1 !important;
+    color: $black;
+  }
+  @media screen and (prefers-color-scheme: dark) {
     background: $dark-color-1 !important;
     color: $black;
   }
@@ -419,6 +525,10 @@ P + .table-responsive {
     background: $dark-color-1 !important;
     color: $black;
   }
+  @media screen and (prefers-color-scheme: dark) {
+    background: $dark-color-1 !important;
+    color: $black;
+  }
 }
 @media (hover: hover) and (pointer: fine) {
   .clm-8-bg-color tr:not(.collapse-row):hover td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:nth-child(8):not([colspan]),
@@ -436,6 +546,10 @@ P + .table-responsive {
     background: $dark-color-1 !important;
     color: $black;
   }
+  @media screen and (prefers-color-scheme: dark) {
+    background: $dark-color-1 !important;
+    color: $black;
+  }
 }
 @media (hover: hover) and (pointer: fine) {
   .clm-9-bg-color tr:not(.collapse-row):hover td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:not([colspan]) + td:nth-child(9):not([colspan]),
@@ -444,6 +558,3 @@ P + .table-responsive {
     background: $app-color-2 !important;
   }
 }
-
-
-

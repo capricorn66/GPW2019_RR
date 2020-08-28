@@ -204,8 +204,7 @@
   width: 220px;
   top: 100px;
   position: sticky;
-  @media all and (-ms-high-contrast:none)
-  {
+  @media all and (-ms-high-contrast:none) {
     position: relative;
     top: 0;
   }
@@ -256,6 +255,9 @@
     display: block;
     margin-bottom: 10px;
     font-size: 14px;
+    .large-font & {
+      font-size: 16px;
+    }
     text-decoration: none;
     &:hover,
     &.active {
@@ -271,4 +273,146 @@
     }
   }
 
+}
+
+.darkTheme {
+  .aside-tools {
+    .tools-nav {
+      @include media-breakpoint-down(md) {
+        background: $dark-color-1;
+      }
+      .tools-item {
+
+        .tip {
+          background: $gray-800;
+          color: $white;
+          &:after {
+            background: $gray-800;
+          }
+        }
+
+        .dropdown-menu {
+          background: $dark-color-1;
+          @include media-breakpoint-up(lg) {
+            &::before {
+              border-color: transparent transparent transparent $dark-color-1;
+            }
+          }
+          @include media-breakpoint-down(md) {
+            &::before {
+              border-color: transparent transparent $dark-color-1 transparent;
+            }
+          }
+          button,
+          a {
+            background: $dark-color-1;
+            color: $gray-900;
+          }
+        }
+        .tools-link {
+          background: $gray-800;
+          color: $dark-body-color;
+          &::after {
+            background: $gray-500;
+          }
+        }
+      }
+    }
+  }
+  .aside-navbar {
+    .aside-nav {
+      background: $gray-600;
+      + .aside-extras {
+        &::before {
+          background-color: $gray-100;
+        }
+      }
+    }
+
+    .aside-extras {
+      background: $gray-700;
+      h4 {
+        color: $gray-100;
+      }
+    }
+
+    .aside-link {
+      color: $gray-100;
+      &:hover,
+      &.active {
+        color: $dark-color-1;
+      }
+    }
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .aside-tools {
+    .tools-nav {
+      @include media-breakpoint-down(md) {
+        background: $dark-color-1;
+      }
+      .tools-item {
+
+        .tip {
+          background: $gray-800;
+          color: $white;
+          &:after {
+            background: $gray-800;
+          }
+        }
+
+        .dropdown-menu {
+          background: $dark-color-1;
+          @include media-breakpoint-up(lg) {
+            &::before {
+              border-color: transparent transparent transparent $dark-color-1;
+            }
+          }
+          @include media-breakpoint-down(md) {
+            &::before {
+              border-color: transparent transparent $dark-color-1 transparent;
+            }
+          }
+          button,
+          a {
+            background: $dark-color-1;
+            color: $gray-900;
+          }
+        }
+        .tools-link {
+          background: $gray-800;
+          color: $dark-body-color;
+          &::after {
+            background: $gray-500;
+          }
+        }
+      }
+    }
+  }
+  .aside-navbar {
+    .aside-nav {
+      background: $gray-600;
+      + .aside-extras {
+        &::before {
+          background-color: $gray-100;
+        }
+      }
+    }
+
+    .aside-extras {
+      background: $gray-700;
+      h4 {
+        color: $gray-100;
+      }
+    }
+
+    .aside-link {
+      color: $gray-100;
+      &:hover,
+      &.active {
+        color: $dark-color-1;
+      }
+    }
+  }
 }

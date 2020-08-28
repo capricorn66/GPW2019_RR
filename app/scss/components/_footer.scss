@@ -40,3 +40,33 @@ footer {
     }
   }
 }
+
+.darkTheme {
+
+  footer {
+    background-color: $gray-700;
+    .footer-bottom {
+      background-color: $gray-800;
+      color: $dark-body-color;
+      a {
+        color: $dark-color-1;
+      }
+    }
+  }
+
+}
+
+@media screen and (prefers-color-scheme: dark) {
+
+  footer {
+    background-color: $gray-700;
+    .footer-bottom {
+      background-color: $gray-800;
+      color: $dark-body-color;
+      a {
+        color: $dark-color-1;
+      }
+    }
+  }
+
+}

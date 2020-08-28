@@ -26,13 +26,28 @@
         transition: border .3s;
         -webkit-transition: border .3s;
         border-radius: 5px;
-        @include transition(width ease-in .2s)
+        @include transition(width ease-in .2s);
+        .darkTheme & {
+          background: $dark-color-1;
+          border: 1px solid $dark-color-1;
+        }
+        @media screen and (prefers-color-scheme: dark) {
+          background: $dark-color-1;
+          border: 1px solid $dark-color-1;
+        }
+
       }
       &.active span:not([class]) {
         width: 34px;
         background: $white;
         transition: background .3s;
         -webkit-transition: background .3s;
+        .darkTheme & {
+          background: $dark-color-1;
+        }
+        @media screen and (prefers-color-scheme: dark) {
+          background: $dark-color-1;
+        }
       }
     }
 
@@ -40,6 +55,10 @@
       background: $white;
       border: 2px solid $app-color-1;
       .darkTheme & {
+        background: $black;
+        border: 2px solid $dark-color-1;
+      }
+      @media screen and (prefers-color-scheme: dark) {
         background: $black;
         border: 2px solid $dark-color-1;
       }
@@ -52,6 +71,10 @@
       color: $white;
       max-width: 270px;
       .darkTheme & {
+        background: $dark-color-1;
+        color: $black;
+      }
+      @media screen and (prefers-color-scheme: dark) {
         background: $dark-color-1;
         color: $black;
       }
@@ -74,10 +97,16 @@
           .darkTheme & {
             border: 2px solid $dark-color-1;
           }
+          @media screen and (prefers-color-scheme: dark) {
+            border: 2px solid $dark-color-1;
+          }
         }
         &.active span:not([class]) {
           background: $app-color-1;
           .darkTheme & {
+            background: $dark-color-1;
+          }
+          @media screen and (prefers-color-scheme: dark) {
             background: $dark-color-1;
           }
         }
@@ -115,6 +144,14 @@
 
     .col-vr::after {
       background-color: $app-color-1 !important;
+
+      .darkTheme & {
+        background-color: $dark-color-1 !important;
+      }
+      @media screen and (prefers-color-scheme: dark) {
+        background-color: $dark-color-1 !important;
+      }
+
     }
 
     p {
@@ -253,15 +290,43 @@
       }
     }
 
-
   }
 
   .section-start {
     color: $white;
-    padding: 30vh 0;
+    padding: 30vh 0 !important;
     h1 {
       font-weight: 300;
-      font-size: 32px;
+
+      @include media-breakpoint-only(xs) {
+        font-size: 24px;
+      }
+
+      @include media-breakpoint-between(sm,lg) {
+        font-size: 28px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        font-size: 42px;
+      }
+
+      @media (max-height: 900px) and (min-width: 1540px) {
+        font-size: 38px;
+      }
+
+      @media (max-height: 900px) and (min-width: 1200px) {
+        font-size: 34px;
+      }
+
+      @media (max-height: 800px) and (min-width: 1200px) {
+        font-size: 32px;
+      }
+
+      @media (max-height: 700px) and (min-width: 1200px) {
+        font-size: 32px;
+      }
+
+
       strong {
         display: block;
         font-weight: 200;
@@ -309,6 +374,12 @@
 
     .col-vr::after {
       background-color: $white;
+      .darkTheme & {
+        background-color: darken($gray-900, 4%);
+      }
+      @media screen and (prefers-color-scheme: dark) {
+        background-color: darken($gray-900, 4%);
+      }
     }
 
     .nav {
@@ -370,6 +441,21 @@
         &.active {
           color: $app-color-1;
         }
+
+        .darkTheme & {
+          color: $white;
+          &.active {
+            color: $dark-color-1;
+          }
+        }
+
+        @media screen and (prefers-color-scheme: dark) {
+          color: $white;
+          &.active {
+            color: $dark-color-1;
+          }
+        }
+
       }
     }
 
@@ -397,6 +483,17 @@
 
       @media (max-height: 700px) and (min-width: 1540px) {
         height: auto;
+      }
+
+      .darkTheme & {
+        .bg-white {
+          background-color: darken($gray-900, 5%) !important;
+        }
+      }
+      @media screen and (prefers-color-scheme: dark) {
+        .bg-white {
+          background-color: darken($gray-900, 5%) !important;
+        }
       }
 
     }
@@ -437,6 +534,15 @@
 
     .target-legend {
       border: 1px solid $gray-200;
+
+      .darkTheme & {
+        border: 1px solid $gray-900;
+      }
+
+      @media screen and (prefers-color-scheme: dark) {
+        border: 1px solid $gray-900;
+      }
+
       padding: 10px;
       display: -ms-flexbox;
       display: flex;
@@ -507,6 +613,17 @@
         padding: 10px 15px;
         background-color: $app-color-2;
         line-height: 1.3em;
+
+        .darkTheme & {
+          color: $gray-900;
+          background-color: $dark-color-2;
+        }
+
+        @media screen and (prefers-color-scheme: dark) {
+          color: $gray-900;
+          background-color: $dark-color-2;
+        }
+
       }
 
       .target-box-body {
@@ -515,7 +632,13 @@
         background-position: -1000% -1000%;
         background-repeat: inherit;
         flex: 1 1 auto;
+        .darkTheme & {
+          background-color: darken($gray-900, 5%);
+        }
 
+        @media screen and (prefers-color-scheme: dark) {
+          background-color: darken($gray-900, 5%);
+        }
 
         @include media-breakpoint-only(xs) {
           padding: 30px 10px 10px;
@@ -554,6 +677,16 @@
         background-color: $white;
         font-weight: 300;
         color: $app-color-1;
+
+        .darkTheme & {
+          background-color: darken($gray-900, 5%);
+          color: $white;
+        }
+
+        @media screen and (prefers-color-scheme: dark) {
+          background-color: darken($gray-900, 5%);
+          color: $white;
+        }
 
         @include media-breakpoint-only(xs) {
           padding: 10px;
@@ -879,8 +1012,33 @@
       .col-vr {
         &::after {
           background-color: $white;
+          .darkTheme & {
+            background-color: darken($gray-900, 5%) !important;
+          }
+          @media screen and (prefers-color-scheme: dark) {
+            background-color: darken($gray-900, 5%) !important;
+          }
         }
       }
+
+      .darkTheme & {
+        .black {
+          color: $white !important;
+        }
+        .bg-white {
+          background-color: darken($gray-900, 5%) !important;
+        }
+      }
+
+      @media screen and (prefers-color-scheme: dark) {
+        .black {
+          color: $white !important;
+        }
+        .bg-white {
+          background-color: darken($gray-900, 5%) !important;
+        }
+      }
+
     }
   }
 
@@ -1136,6 +1294,15 @@
       .container {
         height: 100%;
       }
+      .tab-pane {
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        &.show {
+          display: -ms-flexbox;
+          display: flex;
+        }
+      }
+
       .section-management-img {
         background-size: cover;
         background-position: center center;
@@ -1336,6 +1503,14 @@
           font-weight: 500;
           &.active {
             color: $app-color-2;
+
+            .darkTheme & {
+              color: $dark-color-2;
+            }
+            @media screen and (prefers-color-scheme: dark) {
+              color: $dark-color-2;
+            }
+
           }
         }
       }
@@ -1473,6 +1648,39 @@
             }
           }
         }
+
+        @media screen and (prefers-color-scheme: dark) {
+
+          .nav-link {
+            color: $white;
+            &::after {
+              background-color: $dark-color-2;
+            }
+            &:hover,
+            &:focus,
+            &.active {
+              color: $dark-color-1;
+            }
+          }
+
+        }
+
+        @media screen and (prefers-color-scheme: dark) {
+
+          .nav-link {
+            color: $white;
+            &::after {
+              background-color: $dark-color-2;
+            }
+            &:hover,
+            &:focus,
+            &.active {
+              color: $dark-color-1;
+            }
+          }
+
+        }
+
       }
     }
   }
@@ -1531,6 +1739,65 @@
           background-color: $white;
         }
       }
+
+      .darkTheme & {
+
+        .box-link {
+          &:hover {
+            .box-link-body {
+              background-color: $gray-900;
+              .title {
+                color: $dark-color-1;
+              }
+              .btn-outline-secondary {
+                border-color: $white;
+                color: $white;
+              }
+            }
+          }
+          .box-link-body {
+            @include media-breakpoint-down(md) {
+              border: 1px solid $gray-900;
+            }
+          }
+        }
+        .col-vr {
+          &::after {
+            background-color: $gray-900;
+          }
+        }
+
+      }
+
+      @media screen and (prefers-color-scheme: dark) {
+
+        .box-link {
+          &:hover {
+            .box-link-body {
+              background-color: $gray-900;
+              .title {
+                color: $dark-color-1;
+              }
+              .btn-outline-secondary {
+                border-color: $white;
+                color: $white;
+              }
+            }
+          }
+          .box-link-body {
+            @include media-breakpoint-down(md) {
+              border: 1px solid $gray-900;
+            }
+          }
+        }
+        .col-vr {
+          &::after {
+            background-color: $gray-900;
+          }
+        }
+
+      }
+
     }
   }
 
@@ -1649,6 +1916,29 @@
           background-color: $white;
         }
       }
+
+      .darkTheme & {
+
+      }
+
+      @media screen and (prefers-color-scheme: dark) {
+        .box {
+          .box-header {
+            background-color: rgba($dark-color-1,.9);
+            color: $gray-900;
+          }
+          .box-body {
+            background-color: rgba($gray-900,.9);
+            color: $dark-color-1;
+          }
+        }
+        .col-vr {
+          &::after {
+            background-color: $gray-900;
+          }
+        }
+      }
+
     }
   }
 
