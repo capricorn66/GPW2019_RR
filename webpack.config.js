@@ -23,6 +23,8 @@ const htmlInteractiveKPI = generateHtml('InteractiveKPI');
 const htmlText = generateHtml('text');
 const htmlDownloadCenter = generateHtml('downloadCenter');
 const htmlMultimediaCenter = generateHtml('multimediaCenter');
+const htmlResult = generateHtml('result');
+const htmlClipboard = generateHtml('clipboard');
 
 module.exports = (env, options) => {
 
@@ -59,7 +61,9 @@ module.exports = (env, options) => {
             .concat(htmlInteractiveKPI)
             .concat(htmlText)
             .concat(htmlDownloadCenter)
-            .concat(htmlMultimediaCenter),
+            .concat(htmlMultimediaCenter)
+            .concat(htmlResult)
+            .concat(htmlClipboard),
 
         optimization: {
             minimizer: [

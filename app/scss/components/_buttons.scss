@@ -11,6 +11,9 @@
   min-width: 128px;
   justify-content: center;
   min-height: 40px;
+  &.minW-auto {
+    min-width: auto;
+  }
 }
 
 .btn-lg {
