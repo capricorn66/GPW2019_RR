@@ -12,6 +12,20 @@ main {
   font-weight: 300;
   font-size: 15px;
 
+  @include media-breakpoint-up(lg) {
+    a:empty[name] {
+      position: relative;
+      top: -90px;
+    }
+  }
+
+  @include media-breakpoint-between(sm,md) {
+    a:empty[name] {
+      position: relative;
+      top: -75px;
+    }
+  }
+
   .large-font & {
     font-size: 17px;
   }
