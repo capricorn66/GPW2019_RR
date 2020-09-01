@@ -124,6 +124,10 @@
   .accordion {
     border-bottom: 1px solid $gray-600;
 
+    .card {
+      background: transparent;
+    }
+
     .card-header,
     .btn-accordion {
       color: $dark-body-color;
