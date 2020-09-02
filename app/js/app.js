@@ -54,6 +54,16 @@ document.addEventListener('DOMContentLoaded', function(){
                 setTimeout(function(){ $(hashAddress).get(0).scrollIntoView(); }, 1000);
             }
 
+            if( $(hashAddress).closest('.tab-pane') && $(hashAddress).closest('.collapse') ) {
+                const activeTab = $(hashAddress).closest('.tab-pane').attr('id');
+                $(`[aria-controls="${activeTab}"]`).tab('show');
+                setTimeout(function(){ $(hashAddress).get(0).scrollIntoView(); }, 1000);
+
+                const collapseBtn = $(hashAddress).closest('.collapse').prev().find('[data-toggle="collapse"]').attr('data-target');
+                $(collapseBtn).collapse('show');
+                setTimeout(function(){ $(hashAddress).get(0).scrollIntoView(); }, 1000);
+            }
+
         }
 
     }
