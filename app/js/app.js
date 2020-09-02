@@ -30,6 +30,29 @@ import './home';
 
 document.addEventListener('DOMContentLoaded', function(){
 
+
+    let hashUrl = document.location.toString();
+    hashUrl = hashUrl.replace(/\./g, '\\\.').replace(/%20/g, '-').replace(/%22/g, '');
+
+    if ( hashUrl.match('#') ) {
+        let hashAddress = '#'+hashUrl.split('#')[1];
+
+        //przesowa do elementu
+        if (!$('#fullpage').length) {
+
+            hashAddress = hashAddress.replace(/"/g, '').replace(/ /g, '-').replace(/&quot;/g, '').replace('/', '-').replace(/\./g, '');
+
+            if( $(hashAddress).closest('.tab-pane') ) {
+                const activeTab = $(hashAddress).closest('.tab-pane').attr('id');
+                $(`[aria-controls="${activeTab}"]` ).tab('show');
+                setTimeout(function(){ $(hashAddress).get(0).scrollIntoView(); }, 1000);
+            }
+
+        }
+
+    }
+
+
     window.onscroll = function() {handleHeader()};
     handleHeader();
 
@@ -68,3 +91,8 @@ function handleHeader() {
 // jQuery.fn.jquery
 // $.fn.popover.Constructor.VERSION
 // $.fn.hasAttr
+
+
+
+
+
