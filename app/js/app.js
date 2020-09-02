@@ -44,7 +44,13 @@ document.addEventListener('DOMContentLoaded', function(){
 
             if( $(hashAddress).closest('.tab-pane') ) {
                 const activeTab = $(hashAddress).closest('.tab-pane').attr('id');
-                $(`[aria-controls="${activeTab}"]` ).tab('show');
+                $(`[aria-controls="${activeTab}"]`).tab('show');
+                setTimeout(function(){ $(hashAddress).get(0).scrollIntoView(); }, 1000);
+            }
+
+            if( $(hashAddress).closest('.collapse') ) {
+                const collapseBtn = $(hashAddress).closest('.collapse').prev().find('[data-toggle="collapse"]').attr('data-target');
+                $(collapseBtn).collapse('show');
                 setTimeout(function(){ $(hashAddress).get(0).scrollIntoView(); }, 1000);
             }
 
