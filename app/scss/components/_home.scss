@@ -956,7 +956,7 @@
       }
 
       @include media-breakpoint-up(xxl) {
-        font-size: 14px;
+        font-size: 15px;
         padding-top: 30px;
         padding-bottom: 30px;
         p {
@@ -975,7 +975,7 @@
       }
 
       @media (max-height: 800px) and (min-width: 1540px) {
-        font-size: 13px;
+        font-size: 14px;
         padding-top: 20px;
         padding-bottom: 20px;
         p {
@@ -1015,6 +1015,11 @@
       color: $white;
       background-size: cover;
       background-position: center center;
+
+      .bg-white {
+        background-color: rgba($white, .6) !important;
+      }
+
       .col-vr {
         &::after {
           background-color: $white;
@@ -1032,7 +1037,7 @@
           color: $white !important;
         }
         .bg-white {
-          background-color: darken($gray-900, 5%) !important;
+          background-color: rgba(darken($gray-900, 5%),.6) !important;
         }
       }
 
@@ -1041,7 +1046,7 @@
           color: $white !important;
         }
         .bg-white {
-          background-color: darken($gray-900, 5%) !important;
+          background-color: rgba(darken($gray-900, 5%),.6) !important;
         }
       }
 

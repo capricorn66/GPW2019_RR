@@ -15,7 +15,7 @@ main {
   @include media-breakpoint-up(lg) {
     a:empty[name] {
       position: relative;
-      top: -90px;
+      top: -100px;
     }
   }
 
@@ -334,62 +334,18 @@ main {
           .nav-link {
             border-color: $white;
             border-radius: 0;
-            padding: 30px 15px;
-            min-width: 240px;
+            min-width: 158px;
             color: $white;
+            padding: 20px 10px;
+            img {
+              width: 80px;
+              margin-bottom: 16px;
+            }
             span {
               display: block;
               line-height: 1.2em;
+              font-size: 14px;
             }
-
-            @include media-breakpoint-down(sm) {
-              padding: 20px 10px;
-              min-width: 180px;
-              img {
-                width: 60px;
-                margin-bottom: 12px;
-              }
-              span {
-                font-size: 16px;
-              }
-            }
-
-            @include media-breakpoint-between(md,lg) {
-              padding: 20px 15px;
-              min-width: 160px;
-              img {
-                width: 60px;
-                margin-bottom: 16px;
-              }
-              span {
-                font-size: 16px;
-              }
-            }
-
-            @include media-breakpoint-only(xl) {
-              padding: 20px 10px;
-              min-width: 160px;
-              img {
-                width: 80px;
-                margin-bottom: 16px;
-              }
-              span {
-                font-size: 16px;
-              }
-            }
-
-            @include media-breakpoint-up(xxl) {
-              padding: 20px 10px;
-              min-width: 180px;
-              img {
-                width: 80px;
-                margin-bottom: 16px;
-              }
-              span {
-                font-size: 18px;
-              }
-            }
-
           }
         }
       }
