@@ -164,6 +164,20 @@
       margin-bottom: 0;
     }
 
+    .align-items-end p {
+      position: relative;
+
+      &::before {
+        //content: open-quote;
+        content: "\201c";
+        font-size: 400%;
+        position: absolute;
+        right: calc(100% + .2em);
+        top: -.4em;
+        font-family: "Times New Roman", serif;
+      }
+    }
+
     hr {
       border-top-color: $app-color-1;
     }
@@ -1014,6 +1028,22 @@
       background-size: cover;
       background-position: center center;
 
+      .nav {
+        display: block;
+        margin-left: -30px;
+        margin-right: -30px;
+        .nav-news-tab {
+          border-bottom: 1px solid rgba($black,.5);
+          padding: 15px 30px;
+          display: block;
+          text-decoration: none;
+          color: $black;
+          &.active {
+           color: $app-color-1;
+          }
+        }
+      }
+
       .bg-white {
         background-color: rgba($white, .6) !important;
       }
@@ -1037,6 +1067,17 @@
         .bg-white {
           background-color: rgba(darken($gray-900, 5%),.6) !important;
         }
+
+        .nav {
+          .nav-news-tab {
+            border-bottom: 1px solid rgba($white,.5);
+            color: $white;
+            &.active {
+              color: $dark-color-1;
+            }
+          }
+        }
+
       }
 
       @media screen and (prefers-color-scheme: dark) {
@@ -1045,6 +1086,16 @@
         }
         .bg-white {
           background-color: rgba(darken($gray-900, 5%),.6) !important;
+        }
+
+        .nav {
+          .nav-news-tab {
+            border-bottom: 1px solid rgba($white,.5);
+            color: $white;
+            &.active {
+              color: $dark-color-1;
+            }
+          }
         }
       }
 

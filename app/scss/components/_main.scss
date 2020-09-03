@@ -110,6 +110,9 @@ main {
     margin-bottom: 40px;
     li {
       margin-bottom: .5rem;
+      ul {
+        margin: 10px 0 20px;
+      }
       &::before {
         content: "\2022";
         color: $app-color-1;
